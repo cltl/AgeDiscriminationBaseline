@@ -30,15 +30,15 @@ def initiate_dicts():
     global strictly_red, strictly_orange, flexible_red, flexible_orange
 
     #TODO: BECOMES STRICT_RED
-    dict_initiation(strictly_red, 'strict_red.txt')
-    dict_initiation(strictly_orange, 'strict_orange.txt')
-    dict_initiation(flexible_red, 'flexible_red.txt')
-    dict_initiation(flexible_orange, 'flexible_orange.txt')
+    dict_initiation(strictly_red, 'patterns/strict_red.txt')
+    dict_initiation(strictly_orange, 'patterns/strict_orange.txt')
+    dict_initiation(flexible_red, 'patterns/flexible_red.txt')
+    dict_initiation(flexible_orange, 'patterns/flexible_orange.txt')
 
 
-def check_final_destinations():
+def check_final_destinations(outputdir=''):
 
-    my_dests = ['strict_reds','strict_oranges','flexible_reds','flexible_oranges']
+    my_dests = [outputdir + 'strict_reds',outputdir + 'strict_oranges',outputdir + 'flexible_reds',outputdir + 'flexible_oranges']
 
     for dir in my_dests:
         if not os.path.exists(dir):
@@ -130,8 +130,9 @@ def analyze_file(filename, count_dict):
     global strictly_red_age, strictly_orange_age, flexible_red_age, flexible_orange_age
     
     values = [False, False, False, False]
-
+    marked_text = ''
     for line in open(filename, 'r'):
+        print_out_line = line
         if 'aanpak' in line.lower() and ('werkloosheid' in line.lower() or 'werkeloosheid' in line.lower()):
             count_dict['unemployment'] += 1
         elif 'bestrijding' in line.lower() and ('werkloosheid' in line.lower() or 'werkeloosheid' in line.lower()):
@@ -145,6 +146,9 @@ def analyze_file(filename, count_dict):
                         red_dict = count_dict.get('strictRed')
                         red_dict[k] += 1
                         values[0] = True
+                        #FIXME: make the markings around the expression rather than the line
+                        if print_out_line == line:
+                            print_out_line = '+++ ' + line + ' +++'
         for k in strictly_orange.keys():
             if k in line.lower():
                 for v in strictly_orange.get(k):
@@ -152,6 +156,9 @@ def analyze_file(filename, count_dict):
                         orange_dict = count_dict.get('strictOrange')
                         orange_dict[k] += 1
                         values[1] = True
+                        #FIXME: make the markings around the expression rather than the line
+                        if print_out_line == line:
+                            print_out_line = '+++ ' + line + ' +++'
         for k in flexible_red.keys():
             if k in line.lower():
                 for v in flexible_red.get(k):
@@ -159,6 +166,9 @@ def analyze_file(filename, count_dict):
                         fred_dict = count_dict.get('flexibleRed')
                         fred_dict[k] += 1
                         values[2] = True
+                        #FIXME: make the markings around the expression rather than the line
+                        if print_out_line == line:
+                            print_out_line = '+++ ' + line + ' +++'
         for k in flexible_orange.keys():
             if k in line.lower():
                 for v in flexible_orange.get(k):
@@ -166,7 +176,11 @@ def analyze_file(filename, count_dict):
                         forange_dict = count_dict.get('flexibleOrange')
                         forange_dict[k] += 1
                         values[3] = True
-    return values
+                        #FIXME: make the markings around the expression rather than the line
+                        if print_out_line == line:
+                            print_out_line = '+++ ' + line + ' +++'
+        marked_text += print_out_line
+    return values, marked_text
 
 
 def create_output_values(count_dict):
@@ -194,7 +208,7 @@ def create_output_values(count_dict):
 
 
 
-def classify_files(inputdir, outputfile = None):
+def classify_files(inputdir, outputfile = None, outputdir=''):
 
     if outputfile is None:
         outputfile = 'classifications.csv'
@@ -204,17 +218,25 @@ def classify_files(inputdir, outputfile = None):
 
     for f in os.listdir(inputdir):
         count_dict = initiate_count_dicts()
-        values = analyze_file(inputdir + f, count_dict)
+        values, marked_text = analyze_file(inputdir + f, count_dict)
         outvalues = create_output_values(count_dict)
         myout.write(f + outvalues + '\n')
         if values[0]:
-            shutil.copy(inputdir + f, 'strict_reds/')
+            myoutfile = open(outputdir + 'strict_reds/' + f, 'w')
+            myoutfile.write(marked_text)
+            myoutfile.close()
         if values[1]:
-            shutil.copy(inputdir + f, 'strict_oranges/')
+            myoutfile = open(outputdir + 'strict_oranges/' + f, 'w')
+            myoutfile.write(marked_text)
+            myoutfile.close()
         if values[2]:
-            shutil.copy(inputdir + f, 'flexible_reds/')
+            myoutfile = open(outputdir + 'flexible_reds/' + f, 'w')
+            myoutfile.write(marked_text)
+            myoutfile.close()
         if values[3]:
-            shutil.copy(inputdir + f, 'flexible_oranges/')
+            myoutfile = open(outputdir + 'flexible_oranges/' + f, 'w')
+            myoutfile.write(marked_text)
+            myoutfile.close()
 
 
 
@@ -231,10 +253,14 @@ def main(argv=None):
         initiate_dicts()
         check_final_destinations()
         classify_files(argv[1])
-    else:
+    elif len(argv) < 4:
         initiate_dicts()
         check_final_destinations()
         classify_files(argv[1], argv[2])
+    else:
+        initiate_dicts()
+        check_final_destinations(argv[3])
+        classify_files(argv[1], argv[2], argv[3])
 
 
 if __name__ == '__main__':
