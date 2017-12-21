@@ -114,7 +114,8 @@ def analyze_file(filename, count_dict, pattern_dicts):
                     for v in pdict.get(k):
                         if re.match(v, line.lower()):
                             rx = re.compile(v)
-                            newline = re.sub(rx, r'\1<span><b>\2</b></span>\3', line.lower())
+#                            newline = re.sub(rx, r'\1<span><b>\2</b></span>\3', line.lower())
+							newline = re.sub(rx, r'\g<prestr><span><b>\g<relstr></b></span>\g<poststr>', line.lower())
                             mycount_dict = count_dict.get(classname)
                             mycount_dict[k] += 1
                             values[classname] = None
