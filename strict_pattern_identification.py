@@ -114,8 +114,8 @@ def analyze_file(filename, count_dict, pattern_dicts):
                     for v in pdict.get(k):
                         if re.match(v, line.lower()):
                             rx = re.compile(v)
-#                            newline = re.sub(rx, r'\1<span><b>\2</b></span>\3', line.lower())
-							newline = re.sub(rx, r'\g<prestr><span><b>\g<relstr></b></span>\g<poststr>', line.lower())
+#newline = re.sub(rx, r'\1<span><b>\2</b></span>\3', line.lower())
+                            newline = re.sub(rx, r'\g<prestr><span><b>\g<relstr></b></span>\g<poststr>', newline.lower())
                             mycount_dict = count_dict.get(classname)
                             mycount_dict[k] += 1
                             values[classname] = None
@@ -123,49 +123,6 @@ def analyze_file(filename, count_dict, pattern_dicts):
     for key in values:
         values[key] = text
     return values
-
-def analyze_file_old(filename, count_dict):
-
-    
-    values = [False, False, False, False]
-
-    for line in open(filename, 'r'):
-        if 'aanpak' in line.lower() and ('werkloosheid' in line.lower() or 'werkeloosheid' in line.lower()):
-            count_dict['unemployment'] += 1
-        elif 'bestrijding' in line.lower() and ('werkloosheid' in line.lower() or 'werkeloosheid' in line.lower()):
-            count_dict['unemployment'] += 1
-        if 'stage' in line.lower() or 'stagair' in line.lower():
-            count_dict['internship'] += 1
-        for k in strictly_red.keys():
-            if k in line.lower():
-                for v in strictly_red.get(k):
-                    if re.match(v, line.lower()):
-                        red_dict = count_dict.get('strictRed')
-                        red_dict[k] += 1
-                        values[0] = True
-        for k in strictly_orange.keys():
-            if k in line.lower():
-                for v in strictly_orange.get(k):
-                    if re.match(v, line.lower()) and not ' of ' in line:
-                        orange_dict = count_dict.get('strictOrange')
-                        orange_dict[k] += 1
-                        values[1] = True
-        for k in flexible_red.keys():
-            if k in line.lower():
-                for v in flexible_red.get(k):
-                    if re.match(v, line.lower()):
-                        fred_dict = count_dict.get('flexibleRed')
-                        fred_dict[k] += 1
-                        values[2] = True
-        for k in flexible_orange.keys():
-            if k in line.lower():
-                for v in flexible_orange.get(k):
-                    if re.match(v, line.lower()) and not ' of ' in line:
-                        forange_dict = count_dict.get('flexibleOrange')
-                        forange_dict[k] += 1
-                        values[3] = True
-    return values
-
 
 def create_output_values(count_dict):
 
@@ -196,11 +153,88 @@ def write_outfiles(infilename, outdir, values):
         myoutput.close()
 
 
+def run_regression_test(inputfile, classification_dicts):
+
+    correct = 0.0
+    total = 0.0
+    for line in open(inputfile, 'r'):
+        if not line.startswith('=='):
+            total += 1
+            match = ''
+            parts = line.split('\t')
+            for classname, pdict in classification_dicts.items():
+                for k in pdict.keys():
+                    if k in line.lower():
+                        for v in pdict.get(k):
+                            if re.match(v, parts[0].lower()):
+                                match += v + ';'
+            if len(match) == 0:
+                match = 'CLEAN'
+                if line.startswith('FFF'):
+                    correct += 1
+            elif not line.startswith('FFF'):
+                correct += 1
+            
+            if match != parts[1].rstrip():
+                print('CHANGED VALUES:', line, match)
+
+    print(correct/total)
+
+def update_regression_test(inputfile, outputfile, classification_dicts, match_set):
+
+    myoutfile = open(outputfile, 'w')
+    for line in open(inputfile, 'r'):
+        if line.startswith('=='):
+            myoutfile.write(line)
+        else:
+            match = ''
+            parts = line.split('\t')
+            for classname, pdict in classification_dicts.items():
+                for k in pdict.keys():
+                    if k in line.lower():
+                        for v in pdict.get(k):
+                            if re.match(v, parts[0].lower()):
+                                match += v + ';'
+            if len(match) == 0:
+                match = 'CLEAN'
+
+#print(match)
+            if match != parts[1].rstrip():
+                if not match_set is None:
+                    if line in match_set:
+                        myoutfile.write(parts[0] + '\t' + match + '\n')
+                    else:
+                        myoutfile.write(line)
+                else:
+                    myoutfile.write(parts[0] + '\t' + match + '\n')
+            else:
+                myoutfile.write(line)
+
+    myoutfile.close()
+
+def run_regression_tests(args):
+
+    classification_dicts = initiate_dicts(args.config)
+    inputdir = args.inputdir
+
+    for f in os.listdir(inputdir):
+        print(f)
+        if args.update:
+            outdir = args.outdir
+            update_regression_test(inputdir + f, outdir + f, classification_dicts, args.matchset)
+            shutil.move(outdir + f, inputdir + f)
+        else:
+            run_regression_test(inputdir + f, classification_dicts)
+
+
 def classify_files(args):
 
 
     classification_dicts = initiate_dicts(args.config)
-    myout = open(args.outputfile, 'w')
+    if args.outputfile is None:
+        myout = open('classification_output.csv', 'w')
+    else:
+        myout = open(args.outputfile, 'w')
     #create outputfiles if outdir is given
     create_verification_data = False
     if not args.outdir is None:
@@ -221,15 +255,6 @@ def classify_files(args):
             if len(values) > 0:
                 write_outfiles(f, args.outdir, values)
 
-       # if values[0]:
-       #     shutil.copy(inputdir + f, 'strict_reds/')
-       # if values[1]:
-       #     shutil.copy(inputdir + f, 'strict_oranges/')
-       # if values[2]:
-       #     shutil.copy(inputdir + f, 'flexible_reds/')
-       # if values[3]:
-       #     shutil.copy(inputdir + f, 'flexible_oranges/')
-
 
 
 
@@ -238,13 +263,25 @@ def main():
 
     parser = argparse.ArgumentParser(description='Aims to identify various forms of age discrimination in job advertisements')
     parser.add_argument('inputdir', metavar='inputdir', help='path to directory containing the job advertisements')
-    parser.add_argument('outputfile', metavar='outputfile', help='path to outputfile providing statistics from analysis')
+    parser.add_argument('--outputfile', metavar='outputfile', help='path to outputfile providing statistics from analysis')
     parser.add_argument('--outdir', metavar='outputdir', default=None, help='path to output directory (created if does not exist), if placing advertisememts in subdirectories based on their classification is desired (default=None)')
     parser.add_argument('--config', help='path to configuration file (default: local \'config\')', default='config')
+    
+    parser.add_argument('-u', default=False, action='store_true', dest='unittest', help='calls unit test')
+    
+    parser.add_argument('-r', default=False, action='store_true', dest='regressiontest', help='calls regression test')
+    
+    parser.add_argument('--update', default=False, action='store_true', dest='update', help='updates regression test')
+    
+    parser.add_argument('--matchset', help='path to file with testlines that should be updated (default=None; results in all changes registered)')
+
 
     args = parser.parse_args()
 
-    classify_files(args)
+    if args.regressiontest:
+        run_regression_tests(args)
+    else:
+        classify_files(args)
 
 
 

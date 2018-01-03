@@ -1,0 +1,214 @@
+==baan==
+dit is je eerste baan	(?P<prestr>.*)(?P<relstr>(je|jouw|uw)\s+eerste\s+baan)(?P<poststr>.*);
+dit dan misschien jouw eerste baan en begin op de arbeidsmarkt	(?P<prestr>.*)(?P<relstr>(je|jouw|uw)\s+eerste\s+baan)(?P<poststr>.*);
+welkom dan bij uw eerste baan	(?P<prestr>.*)(?P<relstr>(je|jouw|uw)\s+eerste\s+baan)(?P<poststr>.*);
+==bijverdienen==
+wil je bijverdienen naast je school ofzo	(?P<prestr>.*)(?P<relstr>\sbijverdienen\s+naast\s+((je|jouw|uw)\s+)?(school|studie))(?P<poststr>.*);
+wil je bijverdienen naast je studie ofzo	(?P<prestr>.*)(?P<relstr>\sbijverdienen\s+naast\s+((je|jouw|uw)\s+)?(school|studie))(?P<poststr>.*);
+wil je bijverdienen naast jouw studie ofzo	(?P<prestr>.*)(?P<relstr>\sbijverdienen\s+naast\s+((je|jouw|uw)\s+)?(school|studie))(?P<poststr>.*);
+wil je bijverdienen naast school	(?P<prestr>.*)(?P<relstr>\sbijverdienen\s+naast\s+((je|jouw|uw)\s+)?(school|studie))(?P<poststr>.*);
+FFF wil je bijverdienen naast je opleiding ofzo	CLEAN
+==bijbaan==
+zoek je een bijbaan aan te passen aan jouw lesrooster of iets dergelijks	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+(((aan\s+te\s+passen)|aanpassen|aangepast)\s+)aan\s+(je\s+|jouw\s+|uw\s+)?lesrooster)(?P<poststr>.*);
+dan kan je je bijbaan aanpassen aan je lesrooster of iets dergelijks	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+(((aan\s+te\s+passen)|aanpassen|aangepast)\s+)aan\s+(je\s+|jouw\s+|uw\s+)?lesrooster)(?P<poststr>.*);
+dan heb je een bijbaan aangepast aan jouw lesrooster of iets dergelijks	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+(((aan\s+te\s+passen)|aanpassen|aangepast)\s+)aan\s+(je\s+|jouw\s+|uw\s+)?lesrooster)(?P<poststr>.*);
+dan heb je een bijbaan aangepast aan uw lesrooster of iets dergelijks	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+(((aan\s+te\s+passen)|aanpassen|aangepast)\s+)aan\s+(je\s+|jouw\s+|uw\s+)?lesrooster)(?P<poststr>.*);
+zoekt u een bijbaan naast uw studie of iets dergelijks	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+(na|naast)\s+(je|jouw|uw)\s+(school|studie|afstuderen))(?P<poststr>.*);
+en dan heb je een bijbaan na je afstuderen of iets dergelijks	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+(na|naast)\s+(je|jouw|uw)\s+(school|studie|afstuderen))(?P<poststr>.*);
+en zoekt u een bijbaan die u na uw school kunt uitvoeren of iets dergelijks	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+die\s+(je|jij|u)\s+(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*);
+dan heeft u een bijbaan waarbij u naast uw studie wat kunt bijverdienen of iets dergelijks	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+waar(bij)?\s+(je\s+|jij\s+|u\s+)?(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*);
+dan heeft u een bijbaan waarbij u naast school wat kunt bijverdienen of iets dergelijks	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+waar(bij)?\s+(je\s+|jij\s+|u\s+)?(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*);
+dan heb je een bijbaan waar je naast je studie wat kunt bijverdienen of iets dergelijks	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+waar(bij)?\s+(je\s+|jij\s+|u\s+)?(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*);
+zoek je een bijbaan die je naast je school of iets dergelijks	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+die\s+(je|jij|u)\s+(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*);
+zoekt u een bijbaan die u naast uw school of iets dergelijks	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+die\s+(je|jij|u)\s+(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*);
+zoekt u een bijbaan die u na school of iets dergelijks	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+die\s+(je|jij|u)\s+(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*);
+zoek je een bijbaan die je na je school of iets dergelijks	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+die\s+(je|jij|u)\s+(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*);
+zoek jij een bijbaan die je na je afstuderen of iets dergelijks	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+die\s+(je|jij|u)\s+(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*);
+zoekt u een bijbaan die u na uw afstuderen of iets dergelijks kunt doen	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+die\s+(je|jij|u)\s+(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*);
+wel handig zo'n bijbaan die je naast je school hebt	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+die\s+(je|jij|u)\s+(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*);
+handig zo'n bijbaan waarbij je naast je studie een centje kunt bijverdienen	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+waar(bij)?\s+(je\s+|jij\s+|u\s+)?(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*);
+handig zo'n bijbaan waarbij je naast school een centje kunt bijverdienen	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+waar(bij)?\s+(je\s+|jij\s+|u\s+)?(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*);
+zoek jij naast je school een bijbaan dan ben je bij ons aan het goede adres	(?P<prestr>.*)(?P<relstr>\snaast\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen)\s+een\s+bijbaan)(?P<poststr>.*);
+en ook voor een bijbaan na schooltijd kan je bij ons terecht	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+na\s+schooltijd)(?P<poststr>.*);
+en ook voor een bijbaan naast schooltijd kan je bij ons terecht	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+naast\s+(je\s+|jouw\s+|uw\s+)?school)(?P<poststr>.*);
+wil je een bijbaan naast je school	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+naast\s+(je\s+|jouw\s+|uw\s+)?school)(?P<poststr>.*);(?P<prestr>.*)(?P<relstr>\sbijbaan\s+(na|naast)\s+(je|jouw|uw)\s+(school|studie|afstuderen))(?P<poststr>.*);
+wilt u een bijbaan naast uw studie	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+(na|naast)\s+(je|jouw|uw)\s+(school|studie|afstuderen))(?P<poststr>.*);
+je zoekt een bijbaan die jij na school wilt uitvoeren	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+die\s+(je|jij|u)\s+(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*);
+je zoekt een bijbaan die jij na je school wilt uitvoeren	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+die\s+(je|jij|u)\s+(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*);
+natuurlijk zoekt u naast uw school een bijbaan	(?P<prestr>.*)(?P<relstr>\snaast\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen)\s+een\s+bijbaan)(?P<poststr>.*);
+natuurlijk zoek je naast school een bijbaan	(?P<prestr>.*)(?P<relstr>\snaast\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen)\s+een\s+bijbaan)(?P<poststr>.*);
+niemand wil een bijbaan na schooltijd, maar u misschien wel	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+na\s+schooltijd)(?P<poststr>.*);
+FFF handig zo'n bijbaan waarbij je ook nog naast school een centje kunt bijverdienen	CLEAN
+FFF wel handig zo'n bijbaan die in het gebouw naast de school uitgevoerd kan worden	CLEAN
+FFF natuurlijk wil je naast uw school bijverdienen	CLEAN
+FFF natuurlijk wil je naast school bijverdienen	CLEAN
+==starter==
+context ben jij een startende op de arbeidsmarkt	CLEAN
+context ben jij startend op de arbeidsmarkt	CLEAN
+context ben jij een starter op de arbeidsmarkt	(?P<prestr>.*)(?P<relstr>ben(t)?\s+(jij|je|u)\s+(een\s+)?(starte)(r|rs|nd|nde|nden)\s+)(?P<poststr>.*);
+context bent u startend op de arbeidsmarkt	CLEAN
+context bent u een startende collega dan zoeken wij u	CLEAN
+context wij zoeken een startende werknemer die net komt kijken	CLEAN
+context wij zoeken een starter werknemer die net komt kijken	(?P<prestr>.*)(?P<relstr>w(ij|e)\s+zoeken\s+(een\s+)?starte(r|rs|nd|nde|nden)\s+)(?P<poststr>.*);
+context wij zoeken een starter die net komt kijken	(?P<prestr>.*)(?P<relstr>w(ij|e)\s+zoeken\s+(een\s+)?starte(r|rs|nd|nde|nden)\s+)(?P<poststr>.*);
+context we zijn op zoek naar starters die we nog het een en ander kunnen wijsmaken	(?P<prestr>.*)(?P<relstr>w(ij|e)\s+zijn\s+op\s+zoek\s+naar\s+(een\s+)?(starte|spele)(r|rs|nd|nde|nden)\s+)(?P<poststr>.*);
+context we zijn op zoek naar startenden die we nog het een en ander kunnen wijsmaken	CLEAN
+context we zijn op zoek naar een starter die we nog het een en ander kunnen wijsmaken	(?P<prestr>.*)(?P<relstr>w(ij|e)\s+zijn\s+op\s+zoek\s+naar\s+(een\s+)?(starte|spele)(r|rs|nd|nde|nden)\s+)(?P<poststr>.*);
+context we zijn op zoek naar een startende die we nog het een en ander kunnen wijsmaken	CLEAN
+context we zijn op zoek naar startenden die we nog het een en ander kunnen wijsmaken	CLEAN
+context we zijn op zoek naar startexdcn die we nog het een en ander kunnen wijsmaken	CLEAN
+context je bent als starter werkzaam binnen ons grijze team	(?P<prestr>.*)(?P<relstr>(jij|je|u)\s+(ben|kan|kunt|krijg|bent|krijgt)\s+als\s+starter\s+)(?P<poststr>.*);
+zeker krijg je als starter de gelegenheid je te ontwikkelen	(?P<prestr>.*)(?P<relstr>(ben|kan|kunt|krijg|bent|krijgt)\s+(jij|je|u)\s+als\s+starter\s+)(?P<poststr>.*);
+context als starter ben je meer dan welkom	(?P<prestr>.*)(?P<relstr>als\s+starter\s+(ben|kan|kunt|krijg|bent|krijgt)\s+(jij|je|u)\s+)(?P<poststr>.*);
+context als starter krijg je een riante vergoeding	(?P<prestr>.*)(?P<relstr>als\s+starter\s+(ben|kan|kunt|krijg|bent|krijgt)\s+(jij|je|u)\s+)(?P<poststr>.*);
+zeker krijg je als starter de gelegenheid je te ontwikkelen	(?P<prestr>.*)(?P<relstr>(ben|kan|kunt|krijg|bent|krijgt)\s+(jij|je|u)\s+als\s+starter\s+)(?P<poststr>.*);
+en dan bent u als starter meer dan welkom	(?P<prestr>.*)(?P<relstr>(ben|kan|kunt|krijg|bent|krijgt)\s+(jij|je|u)\s+als\s+starter\s+)(?P<poststr>.*);
+wij zoeken startende jongleurs met grijze haren	CLEAN
+en daarom hebben we nu een vacature voor een onmiddelijk startende collega context	CLEAN
+en daarom hebben wij nu een vacature voor een startende collega context\	CLEAN
+natuurlijk zoeken we startende jongleurs met veel evenwichtsgevoel	CLEAN
+natuurlijk zoeken we een starterde jongleur met veel evenwichtsgevoel	CLEAN
+en daarom gaat onze voorkeur naar startende beren van collega's met een dikke huid	CLEAN
+en onze voorkeur gaat uit naar startende beren van collega's met een een dikke huid	CLEAN
+zodoende gaat onze voorkeur uit naar starters op de arbeidsmarkt	(?P<prestr>.*)(?P<relstr>onze\s+voorkeur\s+(gaat\s+)?uit\s+naar\s+(een\s)?starte(r|rs|nd|nde|nden)\s+)(?P<poststr>.*);
+==loopbaan==
+en krijg je de gelegenheid je carrière te starten bij ons	(?P<prestr>.*)(?P<relstr>(jouw|je|uw)\s+(carriere|carrière|loopbaan)\s+te\s+starten\s+)(?P<poststr>.*);
+en krijg je de gelegenheid jouw loopbaan te starten bij ons	(?P<prestr>.*)(?P<relstr>(jouw|je|uw)\s+(carriere|carrière|loopbaan)\s+te\s+starten\s+)(?P<poststr>.*);
+en kunt u uw carriere starten op korte termijn	CLEAN
+en krijg je de gelegenheid je carrière te starten bij ons	(?P<prestr>.*)(?P<relstr>(jouw|je|uw)\s+(carriere|carrière|loopbaan)\s+te\s+starten\s+)(?P<poststr>.*);
+en krijg je de gelegenheid jouw loopbaan te starten bij ons	(?P<prestr>.*)(?P<relstr>(jouw|je|uw)\s+(carriere|carrière|loopbaan)\s+te\s+starten\s+)(?P<poststr>.*);
+en kunt u uw carriere starten op korte termijn	CLEAN
+context je loopbaan bekijken context	CLEAN
+FFF zodoende gaat onze voorkeur waarschijnlijk uit naar starters op de arbeidsmarkt	CLEAN
+FFF we zijn op zoek naar frisse starters die er zin in hebben	CLEAN
+==starten==
+context dan wil jij je loopbaan starten bij ons hopelijk context	(?P<prestr>.*)(?P<relstr>(wil|wilt)\s+(jij|je|u)\s+(je|uw|jouw)\s+(carriere|carrière|loopbaan)\s+starten\s+)(?P<poststr>.*);
+==stappen==
+context context opdat je de eerste stappen zet context context	(?P<prestr>.*)(?P<relstr>(jij|je|u)\s+(de|je|jouw|uw)\s+eerste\s+stap(pen)?\s+zet(ten)?)(?P<poststr>.*);
+context context opdat je de eerste stappn zet context context	CLEAN
+context context opdat je de eerste stap zet context context	CLEAN
+context context als je de eerste stap zet naar de toekomst context context	CLEAN
+context context dat is dan de eerste stap in uw loopbaan context context	CLEAN
+context context dan kan je de eerste stap zetten context context	CLEAN
+FFF context context dan kan je de tweede stap zetten context context	CLEAN
+context context dan kan je de eerste stappen zetten context context	(?P<prestr>.*)(?P<relstr>(jij|je|u)\s+(de|je|jouw|uw)\s+eerste\s+stap(pen)?\s+zet(ten)?)(?P<poststr>.*);
+context context dat is dan de eerste stap in uw loopbaan context context	CLEAN
+==maximaal==
+context beschikt u over maximaal 3 jaar werkervaring context	(?P<prestr>.*)(?P<relstr>(heb|heeft|beschikt|beschik)\s+(u|jij|je)\s+(over\s)?(max\.|maximaal)\s+[\d+]*\s+jaar\s+(werk)?ervaring)(?P<poststr>.*);
+context beschik jij over max. 30 jaar ervaring contex	(?P<prestr>.*)(?P<relstr>(heb|heeft|beschikt|beschik)\s+(u|jij|je)\s+(over\s)?(max\.|maximaal)\s+[\d+]*\s+jaar\s+(werk)?ervaring)(?P<poststr>.*);(?P<prestr>.*)(?P<relstr>(heb|heeft|beschikt|beschik)\s+(u|jij|je)\s+(over\s)?max\.\s+[\d+]*\s+jaar\s+(werk)?ervaring)(?P<poststr>.*);
+context beschik jij over maximaal 30 jaar ervaring contex	(?P<prestr>.*)(?P<relstr>(heb|heeft|beschikt|beschik)\s+(u|jij|je)\s+(over\s)?(max\.|maximaal)\s+[\d+]*\s+jaar\s+(werk)?ervaring)(?P<poststr>.*);
+context heeft u maximaal 3 jaar werkervaring context	(?P<prestr>.*)(?P<relstr>(ben(t)?\s+j(ij|e)|u)\s+max(imaal|\.|stens)\s+[\d]*\s+jaar)(?P<poststr>.*);(?P<prestr>.*)(?P<relstr>(heb|heeft|beschikt|beschik)\s+(u|jij|je)\s+(over\s)?(max\.|maximaal)\s+[\d+]*\s+jaar\s+(werk)?ervaring)(?P<poststr>.*);
+context jij beschikt over max. 30 jaar ervaring contex	(?P<prestr>.*)(?P<relstr>(u|jij|je)\s+(hebt|heeft|beschikt|beschik)\s+(over\s)?(max\.|maximaal)\s+[\d+]*\s+jaar\s+(werk)?ervaring)(?P<poststr>.*);
+context jij hebt maximaal 30 jaar ervaring contex	(?P<prestr>.*)(?P<relstr>(u|jij|je)\s+(hebt|heeft|beschikt|beschik)\s+(over\s)?(max\.|maximaal)\s+[\d+]*\s+jaar\s+(werk)?ervaring)(?P<poststr>.*);
+context jij beschikt over maximaal 3 jaar ervaring contex	(?P<prestr>.*)(?P<relstr>(u|jij|je)\s+(hebt|heeft|beschikt|beschik)\s+(over\s)?(max\.|maximaal)\s+[\d+]*\s+jaar\s+(werk)?ervaring)(?P<poststr>.*);
+==junior ==
+context wij zoeken een junior medewerker context	(?P<prestr>.*)(?P<relstr>w(ij|e)[\s]*zoeken[\s]*(een\s+)?junior)(?P<poststr>.*);
+context we zoeken een junior medewerker context	(?P<prestr>.*)(?P<relstr>w(ij|e)[\s]*zoeken[\s]*(een\s+)?junior)(?P<poststr>.*);
+context wij zoeken een junioren context	(?P<prestr>.*)(?P<relstr>w(ij|e)[\s]*zoeken[\s]*(een\s+)?junior)(?P<poststr>.*);
+context wij zoeken junior medewerkers context	(?P<prestr>.*)(?P<relstr>w(ij|e)[\s]*zoeken[\s]*(een\s+)?junior)(?P<poststr>.*);
+context daarom zoeken wij zoeken een junior medewerker context	(?P<prestr>.*)(?P<relstr>w(ij|e)[\s]*zoeken[\s]*(een\s+)?junior)(?P<poststr>.*);
+context daarom zoeken we een junioren context	(?P<prestr>.*)(?P<relstr>zoeken\s+w(ij|e)\s+(een\s)?junior)(?P<poststr>.*);
+context wij zijn wij op zoek naar junior medewerkers context	(?P<prestr>.*)(?P<relstr>zijn\s+w(ij|e)\s+op\s+zoek\s+naar\s+(een\s+)?junior)(?P<poststr>.*);
+context dit is een typisch een vacature voor een junior medewerker context	(?P<prestr>.*)(?P<relstr>vacature\s+voor\s+(een\s+)?junior)(?P<poststr>.*);
+context natuurlijk ben jij een junior en alleen dan heeft het zin te solliciteren context	(?P<prestr>.*)(?P<relstr>ben\s+(jij|je|u)\s+(een\s+)?junior)(?P<poststr>.*);
+context natuurlijk ben jij een junior en alleen dan heeft het zin te solliciteren context	(?P<prestr>.*)(?P<relstr>ben\s+(jij|je|u)\s+(een\s+)?junior)(?P<poststr>.*);
+context je bent een junior en alleen dan heeft het zin te solliciteren context	(?P<prestr>.*)(?P<relstr>\s(jij|je|u)\s+bent\s+(een\s+)?junior)(?P<poststr>.*);
+context onze junior medewerkers kijken uit naar een nieuwe collega context	(?P<prestr>.*)(?P<relstr>onze\s+junior\s+medewerkers)(?P<poststr>.*);
+context onze medewerkers zijn junior en daarom ben jij junior ook context	(?P<prestr>.*)(?P<relstr>ben\s+(jij|je|u)\s+(een\s+)?junior)(?P<poststr>.*);(?P<prestr>.*)(?P<relstr>onze\s+medewerkers\s+zijn\s+junior)(?P<poststr>.*);
+context onze medewerkers zijn junior vergeet dat niet context	(?P<prestr>.*)(?P<relstr>onze\s+medewerkers\s+zijn\s+junior)(?P<poststr>.*);
+context onze voorkeur gaat uit naar een junior medewerker achter de kassa context	(?P<prestr>.*)(?P<relstr>onze\s+voorkeur\s+(gaat\s)?uit\s+naar\s+(een\s)?junior?)(?P<poststr>.*);
+FFF context u kunt hier als junior onmiddellijk aan de slag context	CLEAN
+FFF context u als junior bent van harte welkom context	CLEAN
+==senior==
+context wij zoeken een senior medewerker context	(?P<prestr>.*)(?P<relstr>w(ij|e)[\s]*zoeken[\s]*(een\s)?senior)(?P<poststr>.*);
+context we zoeken een senior medewerker context	(?P<prestr>.*)(?P<relstr>w(ij|e)[\s]*zoeken[\s]*(een\s)?senior)(?P<poststr>.*);
+context wij zoeken een senioren context	(?P<prestr>.*)(?P<relstr>w(ij|e)[\s]*zoeken[\s]*(een\s)?senior)(?P<poststr>.*);
+context wij zoeken senior medewerkers context	(?P<prestr>.*)(?P<relstr>w(ij|e)[\s]*zoeken[\s]*(een\s)?senior)(?P<poststr>.*);
+context daarom zoeken wij zoeken een senior medewerker context	(?P<prestr>.*)(?P<relstr>w(ij|e)[\s]*zoeken[\s]*(een\s)?senior)(?P<poststr>.*);
+context daarom zoeken we een senioren context	CLEAN
+context wij zijn wij op zoek naar senior medewerkers context	(?P<prestr>.*)(?P<relstr>zijn\s+w(ij|e)\s+op\s+zoek\s+naar\s+(een\s+)?senior)(?P<poststr>.*);
+context dit is een typisch een vacature voor een senior medewerker context	(?P<prestr>.*)(?P<relstr>vacature\s+voor\s+(een\s+)?senior)(?P<poststr>.*);
+context natuurlijk ben jij een senior en alleen dan heeft het zin te solliciteren context	(?P<prestr>.*)(?P<relstr>ben\s+(jij|je|u)\s+(een\s+)?senior)(?P<poststr>.*);
+context natuurlijk ben jij een senior en alleen dan heeft het zin te solliciteren context	(?P<prestr>.*)(?P<relstr>ben\s+(jij|je|u)\s+(een\s+)?senior)(?P<poststr>.*);
+context je bent een senior en alleen dan heeft het zin te solliciteren context	(?P<prestr>.*)(?P<relstr>\s(jij|je|u)\s+bent\s+(een\s+)?senior)(?P<poststr>.*);
+context onze senior medewerkers kijken uit naar een nieuwe collega context	(?P<prestr>.*)(?P<relstr>onze\s+senior\s+medewerkers)(?P<poststr>.*);
+context onze medewerkers zijn senior en daarom ben jij senior ook context	(?P<prestr>.*)(?P<relstr>ben\s+(jij|je|u)\s+(een\s+)?senior)(?P<poststr>.*);(?P<prestr>.*)(?P<relstr>onze\s+medewerkers\s+zijn\s+senior)(?P<poststr>.*);
+context onze medewerkers zijn senior vergeet dat niet context	(?P<prestr>.*)(?P<relstr>onze\s+medewerkers\s+zijn\s+senior)(?P<poststr>.*);
+context onze voorkeur gaat uit naar een senior medewerker achter de kassa context	(?P<prestr>.*)(?P<relstr>onze\s+voorkeur\s+(gaat\s+)?uit\s+naar\s+(een\s+)?senior)(?P<poststr>.*);
+FFF context u kunt hier als senior onmiddellijk aan de slag context	CLEAN
+FFF context u als senior bent van harte welkom context	CLEAN
+context wij zoeken een senior medewerker context	(?P<prestr>.*)(?P<relstr>w(ij|e)[\s]*zoeken[\s]*(een\s)?senior)(?P<poststr>.*);
+context wij zoeken senior medewerkers context	(?P<prestr>.*)(?P<relstr>w(ij|e)[\s]*zoeken[\s]*(een\s)?senior)(?P<poststr>.*);
+context we zoeken een senior medewerker context	(?P<prestr>.*)(?P<relstr>w(ij|e)[\s]*zoeken[\s]*(een\s)?senior)(?P<poststr>.*);
+context we zoeken senior medewerkers context	(?P<prestr>.*)(?P<relstr>w(ij|e)[\s]*zoeken[\s]*(een\s)?senior)(?P<poststr>.*);
+context wij zoeken een senioren met witte haren context	(?P<prestr>.*)(?P<relstr>w(ij|e)[\s]*zoeken[\s]*(een\s)?senior)(?P<poststr>.*);
+FFFF context wij zoeken toch senior medewerkers context	CLEAN
+context daarom zoeken we senior medewerkers context	(?P<prestr>.*)(?P<relstr>zoeken\s+w(ij|e)\s+(een\s)?senior?\s)(?P<poststr>.*);
+cccc dit is een vacature voor een senior persoon cccc	(?P<prestr>.*)(?P<relstr>vacature\s+voor\s+(een\s+)?senior)(?P<poststr>.*);
+==stappen==
+en dat jij de eerste stap zet op weg naar een beter leven	CLEAN
+we hopen dat u de eerste stappen zet naar iets	(?P<prestr>.*)(?P<relstr>(jij|je|u)\s+(de|je|jouw|uw)\s+eerste\s+stap(pen)?\s+zet(ten)?)(?P<poststr>.*);
+we hopen dat uw de eerste stap zet naar iets	CLEAN
+en dan nog iets zodat jij de eerste stappen zetten kan blabla	(?P<prestr>.*)(?P<relstr>(jij|je|u)\s+(de|je|jouw|uw)\s+eerste\s+stap(pen)?\s+zet(ten)?)(?P<poststr>.*);
+==lesrooster==
+context  een baan die past bij je lesrooster context	(?P<prestr>.*)(?P<relstr>(passen|past)\s+bij\s+(je|jouw|uw)\s+lesrooster)(?P<poststr>.*);
+context  met uren die passen bij je lesrooster context	(?P<prestr>.*)(?P<relstr>(passen|past)\s+bij\s+(je|jouw|uw)\s+lesrooster)(?P<poststr>.*);
+==jong==
+context ons jonge bedrijf staat te trappelen context	(?P<prestr>.*)(?P<relstr>(ons|onze)\s+jong(e)?\s+(team|bedrijf|medewerkers|werknemers))(?P<poststr>.*);
+context kom dan bij ons jonge team context	(?P<prestr>.*)(?P<relstr>(ons|onze)\s+jong(e)?\s+(team|bedrijf|medewerkers|werknemers))(?P<poststr>.*);
+context dan voel je je thuis bij onze jonge werknemers context	(?P<prestr>.*)(?P<relstr>(ons|onze)\s+jong(e)?\s+(team|bedrijf|medewerkers|werknemers))(?P<poststr>.*);
+==student==
+context zoek je al tijdens je studie  een baan context 	CLEAN
+context zoek u al tijdens uw studie  een baan context	CLEAN
+context je studeert nog en zoekt een baan context	CLEAN
+context daarom studeert u nog en zoekt ook een baan context	CLEAN
+context natuurlijk ben jij student maar je zoekt ook een baan context	(?P<prestr>.*)(?P<relstr>ben(t)?\s+(je|jij|u)\s+(een\s+)?student)(?P<poststr>.*);
+context natuurlijk bent u student maar je zoekt ook een baan context	(?P<prestr>.*)(?P<relstr>ben(t)?\s+(je|jij|u)\s+(een\s+)?student)(?P<poststr>.*);
+context je bent student en  je zoekt ook een baan context	(?P<prestr>.*)(?P<relstr>(je|jij|u)\s+bent\s+(een\s+)?student)(?P<poststr>.*);
+context als student ben je op zoek naar een baan context	(?P<prestr>.*)(?P<relstr>als\s+student\s+ben(t)?\s+(je|jij|u))(?P<poststr>.*);
+context jij bent net afgestudeerd zoekt ook een baan context	CLEAN
+context bent u zojuist afgestudeerd zoekt u een baan context	CLEAN
+context als je net afgestudeerd bent en op zoek naar een baan context	CLEAN
+context u onlangs afgestudeerd context	CLEAN
+context we zoeken een student voor deze baan context	(?P<prestr>.*)(?P<relstr>w(ij|e)[\s]*zoeken[\s]*(een\s)?student(en)?)(?P<poststr>.*);
+context daarom zoeken we studenten voor deze baan context	(?P<prestr>.*)(?P<relstr>zoeken\s+w(ij|e)\s+(een\s)?student(en)?\s)(?P<poststr>.*);
+context daarom zijn wij op zoek naar studenten voor deze baan context	(?P<prestr>.*)(?P<relstr>zijn\s+w(ij|e)\s+op\s+zoek\s+naar\s+(een\s+)?student)(?P<poststr>.*);
+context we bieden een vacature voor een student aan context	(?P<prestr>.*)(?P<relstr>vacature\s+voor\s+(een\s+)?student)(?P<poststr>.*);
+FFFF context we bieden een baan voor een student aan context	CLEAN
+context ben je een student en zoek je een baan context	(?P<prestr>.*)(?P<relstr>ben(t)?\s+(je|jij|u)\s+(een\s+)?student)(?P<poststr>.*);
+context u bent student en zoekt een baan context	(?P<prestr>.*)(?P<relstr>(je|jij|u)\s+bent\s+(een\s+)?student)(?P<poststr>.*);
+context je bent een student en zoekt een baan context	(?P<prestr>.*)(?P<relstr>(je|jij|u)\s+bent\s+(een\s+)?student)(?P<poststr>.*);
+context ben je student en zoekt een baan context	(?P<prestr>.*)(?P<relstr>ben(t)?\s+(je|jij|u)\s+(een\s+)?student)(?P<poststr>.*);
+context bent u student en zoekt u een baan context	(?P<prestr>.*)(?P<relstr>ben(t)?\s+(je|jij|u)\s+(een\s+)?student)(?P<poststr>.*);
+context ben jij 25 jaar of student en zoek je een baan context	(?P<prestr>.*)(?P<relstr>ben(t)?\s+(je|jij|u)\s+[\d]*\s+jaar\s+of\s+(een\s+)?student)(?P<poststr>.*);
+context u bent 30 jaar of student en zoek je een baan context	(?P<prestr>.*)(?P<relstr>(je|jij|u)\s+ben(t)?\s+[\d]*\s+jaar\s+of\s+(een\s+)?student)(?P<poststr>.*);
+FFF context daar zijn onze studente medewerkers context	(?P<prestr>.*)(?P<relstr>onze\s+studente\s+medewerkers)(?P<poststr>.*);
+context veel van onze medewerkers zijn student context	(?P<prestr>.*)(?P<relstr>onze\s+medewerkers\s+zijn\s+student(en)?)(?P<poststr>.*);(?P<prestr>.*)(?P<relstr>onze\s+medewerkers\s+zijn\s+student)(?P<poststr>.*);
+FFF context veel van onze werknemers zijn student context	CLEAN
+context onze voorkeur gaat uit naar studenten voor deze baan context	(?P<prestr>.*)(?P<relstr>onze\s+voorkeur\s+(gaat\s+)?uit\s+naar\s+(een\s)?student)(?P<poststr>.*);
+context en daarom gaat onze voorkeur uit naar een student voor deze baan context	(?P<prestr>.*)(?P<relstr>onze\s+voorkeur\s+(gaat\s+)?uit\s+naar\s+(een\s)?student)(?P<poststr>.*);
+context zodat je naast je studie een zakcentje kunt bijverdienen context	CLEAN
+context zodat je naast jouw studie een zakcentje kunt bijverdienen context	CLEAN
+context en we dus een vacature voor een student context	(?P<prestr>.*)(?P<relstr>vacature\s+voor\s+(een\s+)?student)(?P<poststr>.*);
+naast je studie	CLEAN
+ben jij student	(?P<prestr>.*)(?P<relstr>ben(t)?\s+(je|jij|u)\s+(een\s+)?student)(?P<poststr>.*);
+FFF tijdens je sollicitaties kom je erachter dat	CLEAN
+je bent een net afgestudeerde student	(?P<prestr>.*)(?P<relstr>(je|jij|u)\s+bent\s+(een\s+)?net\s+(afgestudeerde|afgestudeerd)\s)(?P<poststr>.*);(?P<prestr>.*)(?P<relstr>(pas|net|onlangs|zojuist)\s+afgestudeerd)(?P<poststr>.*);(?P<prestr>.*)(?P<relstr>(pas|net|onlangs|zojuist)\s+afgestudeerd[a-z]*\w\s+)(?P<poststr>.*);
+je bent een net afgestudeerde persoon	CLEAN
+je bent een net afgestudeerde struisvogel	CLEAN
+je bent een zojuist afgestudeerde student	(?P<prestr>.*)(?P<relstr>(pas|net|onlangs|zojuist)\s+afgestudeerd)(?P<poststr>.*);(?P<prestr>.*)(?P<relstr>(pas|net|onlangs|zojuist)\s+afgestudeerd[a-z]*\w\s+)(?P<poststr>.*);
+je bent een zojuist afgestudeerd student	(?P<prestr>.*)(?P<relstr>(pas|net|onlangs|zojuist)\s+afgestudeerd)(?P<poststr>.*);
+je bent een zojuist afgestudeerd figuur	CLEAN
+je bent een onlangs afgestudeerd en zoekt iets	CLEAN
+je bent een zojuist afgestudeerd student en zoekt iets	(?P<prestr>.*)(?P<relstr>(pas|net|onlangs|zojuist)\s+afgestudeerd)(?P<poststr>.*);
+u bent een onlangs afgestudeerde student	(?P<prestr>.*)(?P<relstr>(pas|net|onlangs|zojuist)\s+afgestudeerd)(?P<poststr>.*);(?P<prestr>.*)(?P<relstr>(pas|net|onlangs|zojuist)\s+afgestudeerd[a-z]*\w\s+)(?P<poststr>.*);
+u bent een onlangs afgestudeerd persoon	CLEAN
+je bent pas afgestudeerd	CLEAN
+==opleiding==
+context je volgt een opleiding context	CLEAN
+context u bent bezig met een opleiding context	(?P<prestr>.*)(?P<relstr>bent\s+bezig\s+met\s+(een|je|jouw|uw)\s+opleiding\s+)(?P<poststr>.*);
+context je bent bezig met je opleiding context 	(?P<prestr>.*)(?P<relstr>bent\s+bezig\s+met\s+(een|je|jouw|uw)\s+opleiding\s+)(?P<poststr>.*);
+context tijdens je opleiding heb je een baan context	(?P<prestr>.*)(?P<relstr>\stijdens\s+(je|jouw|uw)\s+(opleiding|studie)\s+)(?P<poststr>.*);
+==test==
+we zoeken een nar die het niet naar heeft	CLEAN
+dag lieve naar wat doe je daar	CLEAN

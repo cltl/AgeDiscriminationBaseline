@@ -1,10 +1,4 @@
 ;direct_strict;
-strict_red.txt
-;direct_flexible;
-flexible_red.txt
+strict_red_v2.txt
 ;indirect_strict;
-strict_orange.txt
-;indirect_flexible;
-flexible_orange.txt
-;exceptions;
-justifications.txt
+strict_orange_v2.txt
