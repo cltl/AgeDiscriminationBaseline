@@ -227,6 +227,27 @@ def run_regression_tests(args):
             run_regression_test(inputdir + f, classification_dicts)
 
 
+def run_tests(inputfile):
+
+    for line in open(inputfile, 'r'):
+        if line.startswith('=='):
+            print('testing ' + line.split('==')[1])
+        else:
+            parts = line.split('\t')
+            testre = parts[1].rstrip()
+            if re.match(testre, parts[0]) and parts[0].startswith('FFF'):
+                print('False positive', line)
+            elif not re.match(testre, parts[0]) and not parts[0].startswith('FFF'):
+                print('False negative', line)
+
+def run_unit_tests(args):
+
+    unitdir = args.inputdir
+
+    for f in os.listdir(unitdir):
+        run_tests(unitdir + f)
+
+
 def classify_files(args):
 
 
@@ -278,7 +299,9 @@ def main():
 
     args = parser.parse_args()
 
-    if args.regressiontest:
+    if args.unittest:
+        run_unit_tests(args)
+    elif args.regressiontest:
         run_regression_tests(args)
     else:
         classify_files(args)

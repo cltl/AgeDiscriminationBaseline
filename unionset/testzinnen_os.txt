@@ -21,19 +21,20 @@ dan heeft u een bijbaan waarbij u naast school wat kunt bijverdienen of iets der
 dan heb je een bijbaan waar je naast je studie wat kunt bijverdienen of iets dergelijks	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+waar(bij)?\s+(je\s+|jij\s+|u\s+)?(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*)
 zoek je een bijbaan die je naast je school of iets dergelijks	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+die\s+(je|jij|u)\s+(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*)
 zoekt u een bijbaan die u naast uw school of iets dergelijks	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+die\s+(je|jij|u)\s+(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*)
-zoekt u een bijbaan die u na school of iets dergelijks	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+die\s+(je|jij|u)\s+(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*);
+zoekt u een bijbaan die u na school of iets dergelijks	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+die\s+(je|jij|u)\s+(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*)
 zoek je een bijbaan die je na je school of iets dergelijks	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+die\s+(je|jij|u)\s+(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*)
 zoek jij een bijbaan die je na je afstuderen of iets dergelijks	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+die\s+(je|jij|u)\s+(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*)
 zoekt u een bijbaan die u na uw afstuderen of iets dergelijks kunt doen	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+die\s+(je|jij|u)\s+(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*)
-wel handig zo'n bijbaan die je naast je school hebt	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+die\s+(je|jij|u)\s+(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*);
+wel handig zo'n bijbaan die je naast je school hebt	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+die\s+(je|jij|u)\s+(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*)
 handig zo'n bijbaan waarbij je naast je studie een centje kunt bijverdienen	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+waar(bij)?\s+(je\s+|jij\s+|u\s+)?(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*)
 handig zo'n bijbaan waarbij je naast school een centje kunt bijverdienen	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+waar(bij)?\s+(je\s+|jij\s+|u\s+)?(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*)
 zoek jij naast je school een bijbaan dan ben je bij ons aan het goede adres	(?P<prestr>.*)(?P<relstr>\snaast\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen)\s+een\s+bijbaan)(?P<poststr>.*)
 en ook voor een bijbaan na schooltijd kan je bij ons terecht	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+na\s+schooltijd)(?P<poststr>.*)
-en ook voor een bijbaan naast schooltijd kan je bij ons terecht	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+naast\s+(je\s+|jouw\s+|uw\s+)?school)(?P<poststr>.*);
-wil je een bijbaan naast je school	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+naast\s+(je\s+|jouw\s+|uw\s+)?school)(?P<poststr>.*);(?P<prestr>.*)(?P<relstr>\sbijbaan\s+(na|naast)\s+(je|jouw|uw)\s+(school|studie|afstuderen))(?P<poststr>.*)
+en ook voor een bijbaan naast schooltijd kan je bij ons terecht	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+naast\s+(je\s+|jouw\s+|uw\s+)?school)(?P<poststr>.*)
+wil je een bijbaan naast je school	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+naast\s+(je\s+|jouw\s+|uw\s+)?school)(?P<poststr>.*)
+wil je een bijbaan naast je school 	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+(na|naast)\s+(je|jouw|uw)\s+(school|studie|afstuderen))(?P<poststr>.*)
 wilt u een bijbaan naast uw studie	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+(na|naast)\s+(je|jouw|uw)\s+(school|studie|afstuderen))(?P<poststr>.*)
-je zoekt een bijbaan die jij na school wilt uitvoeren	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+die\s+(je|jij|u)\s+(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*);
+je zoekt een bijbaan die jij na school wilt uitvoeren	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+die\s+(je|jij|u)\s+(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*)
 je zoekt een bijbaan die jij na je school wilt uitvoeren	(?P<prestr>.*)(?P<relstr>\sbijbaan\s+die\s+(je|jij|u)\s+(na|naast)\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen))(?P<poststr>.*)
 natuurlijk zoekt u naast uw school een bijbaan	(?P<prestr>.*)(?P<relstr>\snaast\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen)\s+een\s+bijbaan)(?P<poststr>.*)
 natuurlijk zoek je naast school een bijbaan	(?P<prestr>.*)(?P<relstr>\snaast\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen)\s+een\s+bijbaan)(?P<poststr>.*)
@@ -96,7 +97,7 @@ context context dat is dan de eerste stap in uw loopbaan context context	CLEAN
 ==maximaal==
 context beschikt u over maximaal 3 jaar werkervaring context	(?P<prestr>.*)(?P<relstr>(heb|heeft|beschikt|beschik)\s+(u|jij|je)\s+(over\s)?(max\.|maximaal)\s+[\d+]*\s+jaar\s+(werk)?ervaring)(?P<poststr>.*)
 context beschik jij over max. 30 jaar ervaring contex	(?P<prestr>.*)(?P<relstr>(heb|heeft|beschikt|beschik)\s+(u|jij|je)\s+(over\s)?(max\.|maximaal)\s+[\d+]*\s+jaar\s+(werk)?ervaring)(?P<poststr>.*)
-context beschik jij over max. 30 jaar ervaring contex	(?P<prestr>.*)(?P<relstr>(heb|heeft|beschikt|beschik)\s+(u|jij|je)\s+(over\s)?max\.\s+[\d+]*\s+jaar\s+(werk)?ervaring)(?P<poststr>.*);
+context beschik jij over max. 30 jaar ervaring contex	(?P<prestr>.*)(?P<relstr>(heb|heeft|beschikt|beschik)\s+(u|jij|je)\s+(over\s)?max\.\s+[\d+]*\s+jaar\s+(werk)?ervaring)(?P<poststr>.*)
 context beschik jij over maximaal 30 jaar ervaring contex	(?P<prestr>.*)(?P<relstr>(heb|heeft|beschikt|beschik)\s+(u|jij|je)\s+(over\s)?(max\.|maximaal)\s+[\d+]*\s+jaar\s+(werk)?ervaring)(?P<poststr>.*)
 context heeft u maximaal 3 jaar werkervaring context	(?P<prestr>.*)(?P<relstr>(ben(t)?\s+j(ij|e)|u)\s+max(imaal|\.|stens)\s+[\d]*\s+jaar)(?P<poststr>.*)
 context heeft u maximaal 3 jaar werkervaring context	(?P<prestr>.*)(?P<relstr>(heb|heeft|beschikt|beschik)\s+(u|jij|je)\s+(over\s)?(max\.|maximaal)\s+[\d+]*\s+jaar\s+(werk)?ervaring)(?P<poststr>.*)
@@ -196,14 +197,15 @@ context zodat je naast je studie een zakcentje kunt bijverdienen context	(?P<pre
 context zodat je naast jouw studie een zakcentje kunt bijverdienen context	(?P<prestr>.*)(?P<relstr>onze\s+medewerkers\s+zijn\s+student)(?P<poststr>.*)
 context en we dus een vacature voor een student context	(?P<prestr>.*)(?P<relstr>vacature\s+voor\s+(een\s+)?student)(?P<poststr>.*)
 naast je studie	CLEAN
-ben jij student	(?P<prestr>.*)(?P<relstr>ben(t)?\s+(je|jij|u)\s+(een\s+)?student)(?P<poststr>.*);
+ben jij student	(?P<prestr>.*)(?P<relstr>ben(t)?\s+(je|jij|u)\s+(een\s+)?student)(?P<poststr>.*)
 FFF tijdens je sollicitaties kom je erachter dat	CLEAN
 je bent een net afgestudeerde student	(?P<prestr>.*)(?P<relstr>(je|jij|u)\s+bent\s+(een\s+)?net\s+(afgestudeerde|afgestudeerd)\s)(?P<poststr>.*)
 je bent een net afgestudeerde student	(?P<prestr>.*)(?P<relstr>(pas|net|onlangs|zojuist)\s+afgestudeerd)(?P<poststr>.*)
 je bent een net afgestudeerde student	(?P<prestr>.*)(?P<relstr>(pas|net|onlangs|zojuist)\s+afgestudeerd[a-z]*\w\s+)(?P<poststr>.*)
 je bent een net afgestudeerde persoon	(?P<prestr>.*)(?P<relstr>(pas|net|onlangs|zojuist)\s+afgestudeerd[a-z]*\w\s+)(?P<poststr>.*)
 je bent een net afgestudeerde struisvogel	(?P<prestr>.*)(?P<relstr>(pas|net|onlangs|zojuist)\s+afgestudeerd[a-z]*\w\s+)(?P<poststr>.*)
-je bent een zojuist afgestudeerde student	(?P<prestr>.*)(?P<relstr>(pas|net|onlangs|zojuist)\s+afgestudeerd)(?P<poststr>.*);(?P<prestr>.*)(?P<relstr>(pas|net|onlangs|zojuist)\s+afgestudeerd[a-z]*\w\s+)(?P<poststr>.*)
+je bent een zojuist afgestudeerde student	(?P<prestr>.*)(?P<relstr>(pas|net|onlangs|zojuist)\s+afgestudeerd)(?P<poststr>.*)
+je bent een zojuist afgestudeerde student	(?P<prestr>.*)(?P<relstr>(pas|net|onlangs|zojuist)\s+afgestudeerd[a-z]*\w\s+)(?P<poststr>.*)
 je bent een zojuist afgestudeerd student	(?P<prestr>.*)(?P<relstr>(pas|net|onlangs|zojuist)\s+afgestudeerd)(?P<poststr>.*)
 je bent een zojuist afgestudeerd figuur	(?P<prestr>.*)(?P<relstr>(pas|net|onlangs|zojuist)\s+afgestudeerd[a-z]*\w\s+)(?P<poststr>.*)
 je bent een onlangs afgestudeerd en zoekt iets	(?P<prestr>.*)(?P<relstr>(pas|net|onlangs|zojuist)\s+afgestudeerd[a-z]*\w\s+)(?P<poststr>.*)
