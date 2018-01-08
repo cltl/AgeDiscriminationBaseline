@@ -1,4 +1,12 @@
-;direct_strict;
+;justification;
+justifications_v2.txt
+;direct_strict;new;
 strict_red_v2.txt
+;conditional_justification;
+conditional_justifications.txt
 ;indirect_strict;
 strict_orange_v2.txt
+;direct_flexible;new;
+flexible_red_v2.txt
+;indirect_flexible;
+flexible_orange_v2.txt

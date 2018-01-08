@@ -18,6 +18,3 @@
 (?P<prestr>.*)(?P<relstr>bestrijding.*werkeloosheid[\s+]van[\s+]seniore)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>aanpak.*werkloosheid[\s+]van[\s+]seniore)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>aanpak.*werkeloosheid[\s+]van[\s+]seniore)(?P<poststr>.*)
-==stage==
-(?P<prestr>.*)(?P<relstr>stage)(?P<poststr>.*)
-(?P<prestr>.*)(?P<relstr>stagair)(?P<poststr>.*)
