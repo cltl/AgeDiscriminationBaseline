@@ -24,9 +24,9 @@
 (?P<prestr>.*)(?P<relstr>(biedt|bieden)\s+(u|jou)\s+een\s+.{0,30}start)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>(wil|wilt)\s+(je|jij|u)\s+.{0,30}(je|jouw|uw)\s+(carriere|carrière|loopbaan|voorkeur)\s+.{0,30}starten)(?P<poststr>.*)
 ==ervaring==
-(?P<prestr>.*)(?P<relstr>(heb|heeft|beschikt|beschik)\s+(u|jij|je)\s+(over\s)?.{0,30}(max\.|maximaal|tot)\s+[\d+]*\s+jaar\s+(werk)?.*ervaring)(?P<poststr>.*)
-(?P<prestr>.*)(?P<relstr>(u|jij|je)\s+(hebt|heeft|beschikt|beschik)\s+(over\s)?.{0,30}(max\.|maximaal|tot)\s+[\d+]*\s+jaar\s+(werk)?.*ervaring)(?P<poststr>.*)
-(?P<prestr>.*)(?P<relstr>(heb|heeft|beschikt|beschik)\s+(u|jij|je)\s+(over\s)?.{0,30}max\.\s+[\d+]*\s+jaar\s+(werk)?.*ervaring)(?P<poststr>.*)
+(?P<prestr>.*)(?P<relstr>(heb|heeft|beschikt|beschik)\s+(u|jij|je)\s+(over\s)?.{0,30}(max\.|maximaal|tot)\s+\d\s+jaar\s+(werk)?.*ervaring)(?P<poststr>.*)
+(?P<prestr>.*)(?P<relstr>(u|jij|je)\s+(hebt|heeft|beschikt|beschik)\s+(over\s)?.{0,30}(max\.|maximaal|tot)\s+\d\s+jaar\s+(werk)?.*ervaring)(?P<poststr>.*)
+(?P<prestr>.*)(?P<relstr>(heb|heeft|beschikt|beschik)\s+(u|jij|je)\s+(over\s)?.{0,30}max\.\s+\d\s+jaar\s+(werk)?.*ervaring)(?P<poststr>.*)
 ==stappen==
 (?P<prestr>.*)(?P<relstr>(eerste|tweede)\s+stap\s+in\s+.{0,30}(je|uw|jouw)\s+(carriere|carrière|loopbaan))(?P<poststr>.*)
 ==starten==
@@ -35,8 +35,6 @@
 (?P<prestr>.*)(?P<relstr>(wil|wilt)\s+(jij|je|u)\s+.{0,30}(je|uw|jouw)\s+(carriere|carrière|loopbaan)\s+.*starten\s+)(?P<poststr>.*)
 ==lesrooster==
 (?P<prestr>.*)(?P<relstr>(passen|past)\s+.{0,30}bij\s+(je|jouw|uw)\s+lesrooster)(?P<poststr>.*)
-==jong==
-(?P<prestr>.*)(?P<relstr>(ons|onze)\s+.{0,30}jong(e)?\s+(team|bedrijf|medewerkers|werknemers))(?P<poststr>.*)
 ==student==
 (?P<prestr>.*)(?P<relstr>(tijdens|naast|gedurende)\s+(je|jouw|uw)\s+.{0,30}(studie|opleiding)\s+)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>tijdens\s+je\s+.{0,30}studie)(?P<poststr>.*)
