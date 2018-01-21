@@ -1,3 +1,4 @@
 ==stage==
 (?P<prestr>.*)(?P<relstr>stage)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>stagair)(?P<poststr>.*)
+(?P<prestr>.*)(?P<relstr>stagiair)(?P<poststr>.*)
