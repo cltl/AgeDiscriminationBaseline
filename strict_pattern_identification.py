@@ -133,6 +133,10 @@ def analyze_file(filename, count_dicts, pattern_dicts):
                     for k in pdict.keys():
                         if k in line.lower():
                             for v in pdict.get(k):
+                                try:
+                                    re.match(v, line.lower())
+                                except:
+                                    print(v)
                                 if re.match(v, line.lower()):
                                     rx = re.compile(v)
                                     newline = re.sub(rx, r'\g<prestr><span><b>\g<relstr></b></span>\g<poststr>', newline.lower())
@@ -144,13 +148,13 @@ def analyze_file(filename, count_dicts, pattern_dicts):
                 text += newline
         else:
             break
-
     for key in values:
         values[key] = text
     return values
 
 
 def analyze_file_per_sentence(filename, count_dict, pattern_dicts):
+
 
     values = {}
     text = ''
@@ -177,6 +181,7 @@ def analyze_file_per_sentence(filename, count_dict, pattern_dicts):
 
     for key in values:
         values[key] = text
+
     return values
 
 
