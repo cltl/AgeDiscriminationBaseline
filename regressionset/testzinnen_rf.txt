@@ -1,0 +1,26 @@
+==JONG
+context context we zoeken een onwaarschijnlijk jonge man context context
+FFFF context context we zoeken een onwaarschijnlijk jonge kast context context
+==MIN
+context context jij bent vast en zeker minimaal 50 jaar of ouder context context 
+context context u bent om en nabij min. 18 jaar oud en wilt graag werken context context 
+FFF context context jij bent minstens 12 jaar oud context context 
+xxxx wij zoeken mannnen van minstens 50 jaar  xxxxxx
+xxxx wij zoeken kasten van minstens 50 jaar  xxxxxx
+xxxx wij zoeken hoge kasten van minstens 50 jaar  xxxxxx
+xxxx wij zoeken lange vrouwen van minstens 50 jaar  xxxxxx
+==LEEFTIJD
+FFF context context wij zoeken iemand in de leeftijd tot 49 jaar of ouder context context
+context context wij zoeken vrolijke mensen in de leeftijd tot 9 jaar context context
+==GENERATIE
+xcontext context dus u bent om en nabij van de generatie van de tachtigers context context
+FFFF xcontext context dus je bent van de generatie van voor de oorlog context context
+xcontext context dus u bent om en nabij van de generatie x context context
+==OUD==
+FFF context context onze oudere medewerkers hebben liever een oudere collega context context
+context context we zoeken een oude en vitale man context context
+==MAX
+context context wij zoeken een leuk iemand van niet meer dan maximaal 49 jaar context context
+FFF context context dat hoe dan ook,  onze voorkeur gaat uit naar collega's van maximaal 79 jaar of jonger context context
+
+
