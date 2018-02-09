@@ -129,6 +129,7 @@ context context uw leeftijd is 50 jaar context context
 context context jouw leeftijd is 2 jaar context context
 context context we zoeken een collega in de leeftijd van 9 tot 95 jaar context context
 context context we zoeken een collega in de leeftijd van 25 tot 26 jaar context context
+context context je hebt een minimale leeftijd van 18 jaar context context
 ==GENERATIE
 xcontext context dus u bent van de generatie van de tachtigers context context
 xcontext context dus je bent van de generatie van voor de oorlog context context
@@ -258,15 +259,22 @@ context context daarom zoeken wij een babyboomer context context
 context context daarom zoeken wij iemand van de babyboomgeneratie context context 
 ==tussen==
 context context jij bent tussen 50 en 57 jaar context context
-context context jij bent tussen 500 en 570 jaar context context
+context FFFcontext jij bent tussen 500 en 570 jaar context context
 context context jij bent tussen de 50 en 57 jaar context context
 context context iets ervoor ben jij tussen de 50 en 57 jaar context context
 context context bent u tussen 50 en 57 jaar context context
-context context bent u tussen 500 en 570 jaar context context
+context context bent u tussen de 50 en de 57 jaar context context
+context context ben jij tussen de 50 en de 57 jaar context context
+context FFF context ben jij tussen de 5 en de 7 jaar context context
+context context bent u tussen de 50 en 57 jaar context context
+context FFFcontext bent u tussen 500 en 570 jaar context context
 context context ben je tussen de 50 en 57 jaar context context
 context context ben je tussen de 50 en de 57 jaar context context
 context context iets ervoor jij bent tussen de 50 en 57 jaar context context
+context FFFcontext je bent tussen de 10 en 12 uur per week beschikbaar context
 context FFFcontext heb je tussen de 50 en 57 jaar context context
+context FFFcontext je werkt tussen de 50 en 57 uur context context
+context FFF met kinderen tussen de 0 en 3 jaar
 ==extra==
 FFF context context wij zoeken een heer met een kast van maximaal 18 jaar oud context context
 FFF context context ja wij zoeken zeker een babyboomer met een oude koelkast context context
