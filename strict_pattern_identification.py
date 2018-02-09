@@ -21,12 +21,11 @@ def dict_update(mydict, filename):
 def create_first_line(classification_dict):
 
     firstLine = 'FileId'
-    for key in sorted(classification_dict.keys()):
-        stage_dicts = classification_dict.get(key)
-        for k in sorted(stage_dicts.keys()):
-            mydict = stage_dicts.get(k)
-            for header in sorted(mydict.keys()):
-                firstLine += ',' + header + ' (' + k + ')'
+
+    for k in sorted(classification_dict.keys()):
+        mydict = classification_dict.get(k)
+        for header in sorted(mydict.keys()):
+            firstLine += ',' + header + ' (' + k + ')'
 
     return firstLine + '\n'
 
