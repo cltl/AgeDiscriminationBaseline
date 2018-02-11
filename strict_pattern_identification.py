@@ -208,7 +208,7 @@ def analyze_file_per_sentence(filename, count_dict, pattern_dicts):
                                     values[classname] = None
                                     analyze_next = False
                                     if '<agestr>' in v:
-                                        age = obtain_age(v, line)
+                                        age = obtain_age(v, line.lower())
                                         if '_vanaf18ofjonger' in k and int(age) < 19:
                                             mycount_dict[k] += 1
             else:
