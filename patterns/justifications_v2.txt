@@ -18,3 +18,9 @@
 (?P<prestr>.*)(?P<relstr>bestrijding.*werkeloosheid[\s+]van[\s+]seniore)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>aanpak.*werkloosheid[\s+]van[\s+]seniore)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>aanpak.*werkeloosheid[\s+]van[\s+]seniore)(?P<poststr>.*)
+==startersbeursregeling==
+(?P<prestr>.*)(?P<relstr>starters?beursregeling)(?P<poststr>.*)
+(?P<prestr>.*)(?P<relstr>startersbeurs\s+regeling)(?P<poststr>.*)
+(?P<prestr>.*)(?P<relstr>beursregeling\s+voor\s+starters)(?P<poststr>.*)
+(?P<prestr>.*)(?P<relstr>regeling\s+voor\s+startersbeurs)(?P<poststr>.*)
+(?P<prestr>.*)(?P<relstr>regeling\s+voor\s+startersbeurzen)(?P<poststr>.*)

@@ -3,7 +3,11 @@ import sys
 import re
 import shutil
 import argparse
+from collections import defaultdict
 
+
+
+age_discriminating_categories = ['min','student','leeftijd_vanaf','leeftijd_bepaald','oud']
 
 
 
@@ -13,19 +17,24 @@ def dict_update(mydict, filename):
     for line in open('patterns/' + filename, 'r'):
         if '==' in line:
             key = line.split('==')[1]
+            if key in age_discriminating_categories:
+                mydict[key + '_vanaf18ofjonger'] = []
             mydict[key] = []
         else:
             mydict[key].append(line.rstrip())
+            if key in age_discriminating_categories and 'agestr' in line:
+                mydict[key + '_vanaf18ofjonger'].append(line.rstrip())
 
 
 def create_first_line(classification_dict):
 
     firstLine = 'FileId'
-
-    for k in sorted(classification_dict.keys()):
-        mydict = classification_dict.get(k)
-        for header in sorted(mydict.keys()):
-            firstLine += ',' + header + ' (' + k + ')'
+    for key in sorted(classification_dict.keys()):
+        stage_dicts = classification_dict.get(key)
+        for k in sorted(stage_dicts.keys()):
+            mydict = stage_dicts.get(k)
+            for header in sorted(mydict.keys()):
+                firstLine += ',' + header + ' (' + k + ')'
 
     return firstLine + '\n'
 
@@ -97,7 +106,7 @@ def initiate_count_dicts(classification_dicts):
 
 
 
-def update_age_dict(line, myregex, mydict, k):
+def update_age_dict_old(line, myregex, mydict, k):
 
     mymatch = re.match(myregex, line.lower())
     nr_of_groups = line.count('(')
@@ -117,7 +126,16 @@ def update_age_dict(line, myregex, mydict, k):
                 myval[foundnumber] = 1
 
 
-def analyze_file(filename, count_dicts, pattern_dicts):
+def update_age_dict(age, k, ages_dict):
+
+    if k in ages_dict:
+        my_age_count = ages_dict.get(k)
+    else:
+        my_age_count = defaultdict(int)
+    my_age_count[age] += 1
+    ages_dict[k] = my_age_count
+
+def analyze_file(filename, count_dicts, pattern_dicts, ages_dict):
 
     values = {}
     text = ''
@@ -132,28 +150,42 @@ def analyze_file(filename, count_dicts, pattern_dicts):
                     for k in pdict.keys():
                         if k in line.lower():
                             for v in pdict.get(k):
-                                try:
-                                    re.match(v, line.lower())
-                                except:
-                                    print(v)
                                 if re.match(v, line.lower()):
                                     rx = re.compile(v)
-                                    newline = re.sub(rx, r'\g<prestr><span><b>\g<relstr></b></span>\g<poststr>', newline.lower())
                                     mycount_dict = count_dict.get(classname)
-                                    mycount_dict[k] += 1
+                                    if not '<agestr>' in v:
+                                        newline = re.sub(rx, r'\g<prestr><span><b>\g<relstr></b></span>\g<poststr>', newline.lower())
+                                        mycount_dict[k] += 1
+                                    else:
+                                        newline = re.sub(rx, r'\g<prestr><span><b>\g<relstr>\g<agestr></b></span>\g<poststr>', newline.lower())
+                                        age = obtain_age(v, line)
+                                        update_age_dict(age, k, ages_dict)
+                                        if not '_vanaf18ofjonger' in k:
+                                            mycount_dict[k] += 1
+                                        elif int(age) < 19:
+                                            mycount_dict[k] += 1
                                     values[classname] = None
                                     analyze_next = False
 
                 text += newline
         else:
             break
+
     for key in values:
         values[key] = text
     return values
 
 
-def analyze_file_per_sentence(filename, count_dict, pattern_dicts):
+def obtain_age(pattern, original_line):
 
+    my_match = re.search(pattern, original_line)
+    age_expression = my_match.group('agestr')
+    age = age_expression.split()[0]
+
+    return age
+
+
+def analyze_file_per_sentence(filename, count_dict, pattern_dicts):
 
     values = {}
     text = ''
@@ -171,16 +203,20 @@ def analyze_file_per_sentence(filename, count_dict, pattern_dicts):
                                     rx = re.compile(v)
                                     newline = re.sub(rx, r'\g<prestr><span><b>\g<relstr></b></span>\g<poststr>', newline.lower())
                                     mycount_dict = count_dict.get(classname)
-                                    mycount_dict[k] += 1
+                                    if not '_vanaf18ofjonger' in k:
+                                        mycount_dict[k] += 1
                                     values[classname] = None
                                     analyze_next = False
+                                    if '<agestr>' in v:
+                                        age = obtain_age(v, line)
+                                        if '_vanaf18ofjonger' in k and int(age) < 19:
+                                            mycount_dict[k] += 1
             else:
                 break
         text += newline
 
     for key in values:
         values[key] = text
-
     return values
 
 
@@ -313,6 +349,18 @@ def run_unit_tests(args):
     for f in os.listdir(unitdir):
         run_tests(unitdir + f)
 
+def convert_age_dictionary(ages_dict):
+
+    age_2_expressions = {}
+    for expression, agecount in ages_dict.items():
+        for age, count in agecount.items():
+            if age in age_2_expressions:
+                mycounter = age_2_expressions.get(age)
+            else:
+                mycounter = defaultdict(int)
+            mycounter[expression] = count
+            age_2_expressions[age] = mycounter
+    return age_2_expressions
 
 def classify_files(args):
 
@@ -333,10 +381,10 @@ def classify_files(args):
 
     inputdir = args.inputdir
 
-
+    ages_dict = {}
     for f in os.listdir(inputdir):
         count_dict = initiate_count_dicts(classification_dicts)
-        values = analyze_file(inputdir + f, count_dict, classification_dicts)
+        values = analyze_file(inputdir + f, count_dict, classification_dicts, ages_dict)
         outvalues = create_output_values(count_dict)
         myout.write(f + outvalues + '\n')
         #FIXME create marked-up output (values dictionary, key with identified text
@@ -344,6 +392,17 @@ def classify_files(args):
             if len(values) > 0:
                 write_outfiles(f, args.outdir, values)
 
+    ages_expression_counts = convert_age_dictionary(ages_dict)
+    with open('expressions_and_ages.csv', 'w') as agesout:
+        agesout.write('age,' + ','.join(sorted(ages_dict.keys())) + '\n')
+        for age, expression_dict in ages_expression_counts.items():
+            outline = age
+            for expression in sorted(ages_dict.keys()):
+                if not expression in expression_dict:
+                    outline += ',0'
+                else:
+                    outline += ',' + str(expression_dict.get(expression))
+            agesout.write(outline)
 
 
 
