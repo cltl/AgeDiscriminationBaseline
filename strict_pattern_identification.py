@@ -178,7 +178,7 @@ def analyze_file(filename, count_dicts, pattern_dicts, ages_dict):
 
 def obtain_age(pattern, original_line):
 
-    my_match = re.search(pattern, original_line)
+    my_match = re.search(pattern, original_line.lower())
     age_expression = my_match.group('agestr')
     age = age_expression.split()[0]
 
