@@ -393,7 +393,10 @@ def classify_files(args):
                 write_outfiles(f, args.outdir, values)
 
     ages_expression_counts = convert_age_dictionary(ages_dict)
-    with open('expressions_and_ages.csv', 'w') as agesout:
+    agesoutputfile = args.agesoutput
+    if agesoutputfile is None:
+        agesoutputfile = 'expressions_and_ages.csv'
+    with open(agesoutputfile, 'w') as agesout:
         agesout.write('age,' + ','.join(sorted(ages_dict.keys())) + '\n')
         for age, expression_dict in ages_expression_counts.items():
             outline = age
@@ -411,7 +414,9 @@ def main():
 
     parser = argparse.ArgumentParser(description='Aims to identify various forms of age discrimination in job advertisements')
     parser.add_argument('inputdir', metavar='inputdir', help='path to directory containing the job advertisements')
-    parser.add_argument('--outputfile', metavar='outputfile', help='path to outputfile providing statistics from analysis')
+    parser.add_argument('--outputfile', metavar='outputfile', help='path to outputfile providing overall statistics from analysis')
+    
+    parser.add_argument('--ageoutput', metavar='ageoutput', help='path to outputfile providing counts of the exact ages that were identified')
     parser.add_argument('--outdir', metavar='outputdir', default=None, help='path to output directory (created if does not exist), if placing advertisememts in subdirectories based on their classification is desired (default=None)')
     parser.add_argument('--config', help='path to configuration file (default: local \'config\')', default='config')
     
