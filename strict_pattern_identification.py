@@ -393,7 +393,7 @@ def classify_files(args):
                 write_outfiles(f, args.outdir, values)
 
     ages_expression_counts = convert_age_dictionary(ages_dict)
-    agesoutputfile = args.agesoutput
+    agesoutputfile = args.ageoutput
     if agesoutputfile is None:
         agesoutputfile = 'expressions_and_ages.csv'
     with open(agesoutputfile, 'w') as agesout:
