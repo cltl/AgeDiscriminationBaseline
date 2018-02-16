@@ -140,6 +140,7 @@ def analyze_file(filename, count_dicts, pattern_dicts, ages_dict):
     values = {}
     text = ''
     analyze_next = True
+
     for key in sorted(pattern_dicts.keys()):
         count_dict = count_dicts.get(key)
         if analyze_next:
@@ -148,7 +149,7 @@ def analyze_file(filename, count_dicts, pattern_dicts, ages_dict):
                 newline = line
                 for classname, pdict in pd.items():
                     for k in pdict.keys():
-                        if k in line.lower():
+                        if k.split('_')[0] in line.lower():
                             for v in pdict.get(k):
                                 if re.match(v, line.lower()):
                                     rx = re.compile(v)
@@ -157,6 +158,7 @@ def analyze_file(filename, count_dicts, pattern_dicts, ages_dict):
                                         newline = re.sub(rx, r'\g<prestr><span><b>\g<relstr></b></span>\g<poststr>', newline.lower())
                                         mycount_dict[k] += 1
                                     else:
+                                        print(filename, v, line, k, classname)
                                         newline = re.sub(rx, r'\g<prestr><span><b>\g<relstr>\g<agestr></b></span>\g<poststr>', newline.lower())
                                         age = obtain_age(v, line)
                                         update_age_dict(age, k, ages_dict)
@@ -405,7 +407,7 @@ def classify_files(args):
                     outline += ',0'
                 else:
                     outline += ',' + str(expression_dict.get(expression))
-            agesout.write(outline)
+            agesout.write(outline + '\n')
 
 
 
