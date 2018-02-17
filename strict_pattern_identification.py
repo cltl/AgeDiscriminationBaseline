@@ -151,6 +151,10 @@ def analyze_file(filename, count_dicts, pattern_dicts, ages_dict):
                     for k in pdict.keys():
                         if k.split('_')[0] in line.lower():
                             for v in pdict.get(k):
+                                try:
+                                    re.match(v, line.lower())
+                                except:
+                                    print(v, 'THE PROBLEM')
                                 if re.match(v, line.lower()):
                                     rx = re.compile(v)
                                     mycount_dict = count_dict.get(classname)
@@ -158,7 +162,6 @@ def analyze_file(filename, count_dicts, pattern_dicts, ages_dict):
                                         newline = re.sub(rx, r'\g<prestr><span><b>\g<relstr></b></span>\g<poststr>', newline.lower())
                                         mycount_dict[k] += 1
                                     else:
-                                        print(filename, v, line, k, classname)
                                         newline = re.sub(rx, r'\g<prestr><span><b>\g<relstr>\g<agestr></b></span>\g<poststr>', newline.lower())
                                         age = obtain_age(v, line)
                                         update_age_dict(age, k, ages_dict)
