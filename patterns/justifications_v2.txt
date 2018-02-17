@@ -1,11 +1,11 @@
-==jeugdwerkloosheid==
+==loosheid_regeling_jongeren==
 (?P<prestr>.*)(?P<relstr>jeugdwerkloosheid)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>jeugdwerkeloosheid)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>bestrijding.*werkloosheid[\s+]van[\s+]jongere)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>bestrijding.*werkeloosheid[\s+]van[\s+]jongere)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>aanpak.*werkloosheid[\s+]van[\s+]jongere)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>aanpak.*werkeloosheid[\s+]van[\s+]jongere)(?P<poststr>.*)
-==ouderenwerkloosheid==
+==loosheid_regeling_ouderen==
 (?P<prestr>.*)(?P<relstr>ouderenwerkloosheid)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>ouderenwerkeloosheid)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>bestrijding.*werkloosheid[\s+]van[\s+]oudere)(?P<poststr>.*)
@@ -18,7 +18,7 @@
 (?P<prestr>.*)(?P<relstr>bestrijding.*werkeloosheid[\s+]van[\s+]seniore)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>aanpak.*werkloosheid[\s+]van[\s+]seniore)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>aanpak.*werkeloosheid[\s+]van[\s+]seniore)(?P<poststr>.*)
-==startersbeursregeling==
+==beursregeling_starters==
 (?P<prestr>.*)(?P<relstr>starters?beursregeling)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>startersbeurs\s+regeling)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>beursregeling\s+voor\s+starters)(?P<poststr>.*)

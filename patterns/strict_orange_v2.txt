@@ -24,10 +24,10 @@
 (?P<prestr>.*)(?P<relstr>(heb|heeft|beschikt|beschik)\s+(u|jij|je)\s+(over\s)?(max\.|maximaal)\s+\d\s+jaar\s+(werk)?ervaring)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>(u|jij|je)\s+(hebt|heeft|beschikt|beschik)\s+(over\s)?(max\.|maximaal)\s+\d\s+jaar\s+(werk)?ervaring)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>(heb|heeft|beschikt|beschik)\s+(u|jij|je)\s+(over\s)?max\.\s+\d\s+jaar\s+(werk)?ervaring)(?P<poststr>.*)
-==stappen==
+==stap==
 (?P<prestr>.*)(?P<relstr>(jij|je|u)\s+(de|je|jouw|uw)\s+eerste\s+stap(pen)?\s+zet(ten)?)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>(eerste|tweede)\s+stap\s+in\s+(je|uw|jouw)\s+(carriere|carrière|loopbaan))(?P<poststr>.*)
-==starten==
+==start==
 (?P<prestr>.*)(?P<relstr>(jouw|je|uw)\s+(carriere|carrière|loopbaan)\s+te\s+starten\s+)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>(biedt|bieden)\s+(je|jou|u)\s+een\s+start\s+)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>(wil|wilt)\s+(jij|je|u)\s+(je|uw|jouw)\s+(carriere|carrière|loopbaan)\s+starten\s+)(?P<poststr>.*)

@@ -25,10 +25,10 @@
 (?P<prestr>.*)(?P<relstr>(heb|heeft|beschikt|beschik)\s+(u|jij|je)\s+(over\s)?.{0,30}(max\.|maximaal|tot)\s+\d\s+jaar\s+(werk)?.{0,30}ervaring)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>(u|jij|je)\s+(hebt|heeft|beschikt|beschik)\s+(over\s)?.{0,30}(max\.|maximaal|tot)\s+\d\s+jaar\s+(werk)?.{0,30}ervaring)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>(heb|heeft|beschikt|beschik)\s+(u|jij|je)\s+(over\s)?.{0,30}max\.\s+\d\s+jaar\s+(werk)?.{0,30}ervaring)(?P<poststr>.*)
-==stappen==
+==stap==
 (?P<prestr>.*)(?P<relstr>(eerste|tweede)\s+stap\s+in\s+.{0,30}(je|uw|jouw)\s+(carriere|carrière|loopbaan))(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>(jij|je|u)\s+.{0,30}(de|je|jouw|uw)\s+eerste\s+stap(pen)?\s+zet(ten)?)(?P<poststr>.*)
-==starten==
+==start==
 (?P<prestr>.*)(?P<relstr>(jouw|je|uw)\s+(carriere|carrière|loopbaan)\s+.{0,30}te\s+starten\s+)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>(biedt|bieden)\s+(je|jou|u)\s+.{0,30}een\s+start\s+)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>(wil|wilt)\s+(jij|je|u)\s+.{0,30}(je|uw|jouw)\s+(carriere|carrière|loopbaan)\s+.*starten\s+)(?P<poststr>.*)
@@ -36,8 +36,8 @@
 (?P<prestr>.*)(?P<relstr>(passen|past)\s+.{0,30}bij\s+(je|jouw|uw)\s+lesrooster)(?P<poststr>.*)
 ==baan==
 (?P<prestr>.*)(?P<relstr>(je|jouw|uw)\s+eerste\s+baan)(?P<poststr>.*)
-==student==
-(?P<prestr>.*)(?P<relstr>(tijdens|naast|gedurende)\s+(je|jouw|uw)\s+.{0,30}(studie|opleiding)\s+)(?P<poststr>.*)
+==stud==
+(?P<prestr>.*)(?P<relstr>(tijdens|naast|gedurende)\s+(je|jouw|uw)\s+.{0,30}(studie)\s+)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>tijdens\s+je\s+.{0,30}studie)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>(je|jij|u)\s+bent\s+(een\s+)?.{0,30}student)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>(je|jij|u)\s+bent\s+(een\s+)?.{0,30}net\s+(afgestudeerde|afgestudeerd)\s)(?P<poststr>.*)
@@ -58,8 +58,8 @@
 (?P<prestr>.*)(?P<relstr>onze\s+medewerkers\s+zijn\s+.{0,30}student)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>vacature\s+voor\s+(een\s+)?.{0,30}student)(?P<poststr>.*)
 ==opleiding==
+(?P<prestr>.*)(?P<relstr>(tijdens|naast|gedurende)\s+(je|jouw|uw)\s+.{0,30}(opleiding)\s+)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>\s(je|jij|u)\s+volgt\s+een\s+.{0,30}opleiding\s+)(?P<poststr>.*)
-(?P<prestr>.*)(?P<relstr>\stijdens\s+(je|jouw|uw)\s+.{0,30}(opleiding|studie)\s+)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>bent\s+bezig\s+met\s+.{0,30}opleiding\s+)(?P<poststr>.*)
 ==jong_groep_passen==
 (?P<prestr>.*)(?P<relstr>\spas(\s+je|\s+jij|t\s+u)\s+in\s+(een|ons|onze)\s+.{0,30}jong(e?.{0,30}\s+team|.{0,30}\s+bedrijf|e.{0,30}\s+groep))(?P<poststr>.*)
