@@ -7,7 +7,7 @@ from collections import defaultdict
 
 
 
-age_discriminating_categories = ['min','student','leeftijd_vanaf','leeftijd_bepaald','oud']
+age_discriminating_categories = ['min','student','leeftijd_vanaf','leeftijd_bepaald','ouder']
 
 
 
