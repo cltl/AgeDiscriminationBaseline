@@ -126,14 +126,26 @@ def update_age_dict_old(line, myregex, mydict, k):
                 myval[foundnumber] = 1
 
 
-def update_age_dict(age, k, ages_dict):
+def update_specific_dict(age, k, ages_dict):
 
     if k in ages_dict:
         my_age_count = ages_dict.get(k)
     else:
         my_age_count = defaultdict(int)
+        
     my_age_count[age] += 1
     ages_dict[k] = my_age_count
+
+
+def update_age_dict(ages, k, ages_dict):
+
+    if len(ages) == 1:
+        update_specific_dict(ages[0], k, ages_dict)
+    elif len(ages) == 2:
+        k1 = k + '_leeftijd1'
+        update_specific_dict(ages[0], k1, ages_dict)
+        k2 = k + '_leeftijd2'
+        update_specific_dict(ages[1], k2, ages_dict)
 
 def analyze_file(filename, count_dicts, pattern_dicts, ages_dict):
 
@@ -163,11 +175,12 @@ def analyze_file(filename, count_dicts, pattern_dicts, ages_dict):
                                         mycount_dict[k] += 1
                                     else:
                                         newline = re.sub(rx, r'\g<prestr><span><b>\g<relstr>\g<agestr></b></span>\g<poststr>', newline.lower())
-                                        age = obtain_age(v, line)
-                                        update_age_dict(age, k, ages_dict)
+                                        ages = obtain_age(v, line)
                                         if not '_vanaf18ofjonger' in k:
+                                            update_age_dict(ages, k + '(' + classname + ')', ages_dict)
                                             mycount_dict[k] += 1
-                                        elif int(age) < 19:
+                                        elif int(ages[0]) < 19:
+                                            update_age_dict(ages, k + '(' + classname + ')', ages_dict)
                                             mycount_dict[k] += 1
                                     values[classname] = None
                                     analyze_next = False
@@ -185,9 +198,9 @@ def obtain_age(pattern, original_line):
 
     my_match = re.search(pattern, original_line.lower())
     age_expression = my_match.group('agestr')
-    age = age_expression.split()[0]
+    ages = re.findall('\d\d',age_expression)
 
-    return age
+    return ages
 
 
 def analyze_file_per_sentence(filename, count_dict, pattern_dicts):
@@ -213,7 +226,7 @@ def analyze_file_per_sentence(filename, count_dict, pattern_dicts):
                                     values[classname] = None
                                     analyze_next = False
                                     if '<agestr>' in v:
-                                        age = obtain_age(v, line.lower())
+                                        ages = obtain_age(v, line.lower())
                                         if '_vanaf18ofjonger' in k and int(age) < 19:
                                             mycount_dict[k] += 1
             else:
