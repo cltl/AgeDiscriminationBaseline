@@ -8,7 +8,7 @@
 (?P<prestr>.*)(?P<relstr>\sbijbaan\s+(na|naast)\s+(je|jouw|uw)\s+(school|studie|afstuderen))(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>\snaast\s+(je\s+|jouw\s+|uw\s+)?(school|studie|afstuderen)\s+een\s+bijbaan)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>\sbijbaan\s+na\s+schooltijd)(?P<poststr>.*)
-==start==
+==starte==
 (?P<prestr>.*)(?P<relstr>ben(t)?\s+(jij|je|u)\s+(een\s+)?(starte)(r|rs|nd|nde|nden)\s+)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>(jij|je|u)\s+ben(t)?\s+(een\s+)?starte(r|rs|nd|nde|nden)\s+)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>w(ij|e)\s+zoeken\s+(een\s+)?starte(r|rs|nd|nde|nden)\s+)(?P<poststr>.*)
@@ -35,7 +35,7 @@
 (?P<prestr>.*)(?P<relstr>(passen|past)\s+bij\s+(je|jouw|uw)\s+lesrooster)(?P<poststr>.*)
 ==baan==
 (?P<prestr>.*)(?P<relstr>(je|jouw|uw)\s+eerste\s+baan)(?P<poststr>.*)
-==student==
+==stud==
 (?P<prestr>.*)(?P<relstr>(tijdens|naast|gedurende)\s+(je|jouw|uw)\s+(studie|opleiding)\s+)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>tijdens\s+je\s+studie\s+)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>\s+(je|jij|u)\s+studeert)(?P<poststr>.*)
