@@ -1,10 +1,10 @@
 ==bijverdien==
 (?P<prestr>.*)(?P<relstr>\sbijverdienen\s+.{0,30}naast\s+((je|jouw|uw)\s+)?(school|studie))(?P<poststr>.*)
 ==bijbaan==
-(?P<prestr>.*)(?P<relstr>\sbijbaan\s+.{0,30}((passen|aanpassen|aangepast|passend|aangepast)\s+)(aan|bij)\s+(je\s+|jouw\s+|uw\s+)?.{0,30}( lesrooster)(?P<poststr>.*)
-(?P<prestr>.*)(?P<relstr>\sbijbaan\s+.{0,30}waar(bij)?\s+(je\s+|jij\s+|u\s+)?(na|naast)\s+(je\s+|jouw\s+|uw\s+)?.{0,30}((school|studie|afstuderen))(?P<poststr>.*)
+(?P<prestr>.*)(?P<relstr>\sbijbaan\s+.{0,30}((passen|aanpassen|aangepast|passend|aangepast)\s+)(aan|bij)\s+(je\s+|jouw\s+|uw\s+)?.{0,30}(lesrooster))(?P<poststr>.*)
+(?P<prestr>.*)(?P<relstr>\sbijbaan\s+.{0,30}waar(bij)?\s+(je\s+|jij\s+|u\s+)?(na|naast)\s+(je\s+|jouw\s+|uw\s+)?.{0,30}(school|studie|afstuderen))(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>\sbijbaan\s+.{0,30}naast\s+(je\s+|jouw\s+|uw\s+)?.{0,30}school)(?P<poststr>.*)
-(?P<prestr>.*)(?P<relstr>\sbijbaan\s+.{0,30}die\s+(je|jij|u)\s+(na|naast)\s+.*(je\s+|jouw\s+|uw\s+)?.{0,30}(school|studie|afstuderen))(?P<poststr>.*)
+(?P<prestr>.*)(?P<relstr>\sbijbaan\s+.{0,30}die\s+(je|jij|u)\s+(na|naast)\s+.{0,30}(je\s+|jouw\s+|uw\s+)?.{0,30}(school|studie|afstuderen))(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>\sbijbaan\s+.{0,30}(na|naast)\s+(je|jouw|uw)\s+.{0,30}(school|studie|afstuderen))(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>\snaast\s+(je\s+|jouw\s+|uw\s+)?.{0,30}(school|studie|afstuderen)\s+.*een\s+bijbaan)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>\sbijbaan\s+.{0,30}na\s+schooltijd)(?P<poststr>.*)

@@ -4,11 +4,11 @@
 (?P<prestr>.*)(?P<relstr>w(ij|e)\s+zijn\s+op\s+zoek\s+naar\s+(een\s)?.{0,30}jong(e|eren|ere)?(?!van geest)\s)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>zijn\s+w(ij|e)\s+op\s+zoek\s+naar\s+(een\s)?.{0,30}jong(e|eren|ere)?(?!van geest)\s)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>vacature\s+voor\s+(een\s)?.{0,30}jong(e|eren|ere)\s?)(?P<poststr>.*)
-(?P<prestr>.*)(?P<relstr>ben(t)?\s+(jij|je|u)\s+(een\s)?.{0,30}jong(e|eren|ere)?(?!van geest)\s))(?P<poststr>.*)
-(?P<prestr>.*)(?P<relstr>\s(jij|je|u)\s+bent\s+(een\s)?.{0,30}jong(e|eren|ere)?(?!van geest)\s))(?P<poststr>.*)
+(?P<prestr>.*)(?P<relstr>ben(t)?\s+(jij|je|u)\s+(een\s)?.{0,30}jong(e|eren|ere)?(?!van geest)\s)(?P<poststr>.*)
+(?P<prestr>.*)(?P<relstr>\s(jij|je|u)\s+bent\s+(een\s)?.{0,30}jong(e|eren|ere)?(?!van geest)\s)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>ben(t)?\s+(j(ij|e)|u)\s+.{0,30}\d\d\s+jaar\s+of\s+jong[a-z]*\b)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>(j(ij|e)|u)\s+bent\s+.{0,30}\d\d\s+jaar\s+of\s+jong[a-z]*\b)(?P<poststr>.*)
-(?P<prestr>.*)(?P<relstr>onze\s+voorkeur\s+.{0,30}(gaat\s)?uit\s+naar\s+(een\s)?.{0,30}jong(e|eren|ere)?(?!van geest)\s))(?P<poststr>.*) 
+(?P<prestr>.*)(?P<relstr>onze\s+voorkeur\s+.{0,30}(gaat\s)?uit\s+naar\s+(een\s)?.{0,30}jong(e|eren|ere)?(?!van geest)\s)(?P<poststr>.*) 
 ==min==
 (?P<prestr>.*)(?P<relstr>(j(ij|e)|u)\s+bent\s+.{0,30}min(imaal|\.|stens)\s+)(?P<agestr>\d\d\s+jaar)!(\s+aantoonba|ervaren|werkervaring|ervaring|actief|kennis)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>(ben(t)?\s+j(ij|e)|u)\s+.{0,30}min(imaal|\.|stens)\s+)(?P<agestr>\d\d\s+jaar)!(\s+aantoonba|ervaren|werkervaring|ervaring|actief|kennis)(?P<poststr>.*)
@@ -48,10 +48,10 @@
 ==leeftijd_van_tot==
 (?P<prestr>.*)(?P<relstr>w(ij|e)\s+zoeken\s+.{0,30}(iemand|mannen|vrouwen|mensen|collega's|meisjes|meiden|jongens|medewerkers|dames|heren)\s+in\s+de\s+leeftijd\s+(van|vanaf)\s+)(?P<agestr>\d\d(\s+tot\s+|\s+tot\s+en\s+met\s+|\s+t/m\s+|-)\d\d)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>w(ij|e)\s+zoeken\s+(een\s)+.{0,30}(man|vrouw|collega|meisje|meid|jongen|medewerker|dame|heer)\s+in\s+de\s+leeftijd\s+(van|vanaf)\s+)(?P<agestr>\d\d(\s+tot\s+|\s+tot\s+en\s+met\s+|\s+t/m\s+|-)\d\d)(?P<poststr>.*)
-(?P<prestr>.*)(?P<relstr>vacature\s+voor\s+.{0,30}(iemand|mannen|vrouwen|mensen|collega's|meisjes|meiden|jongens|medewerkers|dames|heren)\s+in\s+de\s+leeftijd\s+(vanaf)\s+)(?P<agestr>\d\d\(\s+tot\s+|\s+tot\s+en\s+met\s+|\s+t/m\s+|-)\d\d)(?P<poststr>.*)
+(?P<prestr>.*)(?P<relstr>vacature\s+voor\s+.{0,30}(iemand|mannen|vrouwen|mensen|collega's|meisjes|meiden|jongens|medewerkers|dames|heren)\s+in\s+de\s+leeftijd\s+(vanaf)\s+)(?P<agestr>\d\d(\s+tot\s+|\s+tot\s+en\s+met\s+|\s+t/m\s+|-)\d\d)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>vacature\s+voor\s+(een\s)+.{0,30}(man|vrouw|collega|meisje|meid|jongen|medewerker|dame|heer)\s+in\s+de\s+leeftijd\s+(van|vanaf)\s+)(?P<agestr>\d\d(\s+tot\s+|\s+tot\s+en\s+met\s+|\s+t/m\s+|-)\d\d)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>onze\s+voorkeur\s+(gaat\s)?uit\s+naar\s+.{0,30}(iemand|mannen|vrouwen|mensen|collega's|meisjes|meiden|jongens|medewerkers|dames|heren)\s+in\s+de\s+leeftijd\s+(van|vanaf)\s+)(?P<agestr>\d\d(\s+tot\s+|\s+tot\s+en\s+met\s+|\s+t/m\s+|-)\d\d)(?P<poststr>.*)
-(?P<prestr>.*)(?P<relstr>onze\s+voorkeur\s+(gaat\s)?uit\s+naar\s+(een\s)+.{0,30}(man|vrouw|collega|meisje|meid|jongen|medewerker|dame|heer)\s+in\s+de\s+leeftijd\s+(van|vanaf)\s+)(?P<agestr>\d\d\(\s+tot\s+|\s+tot\s+en\s+met\s+|\s+t/m\s+|-)\d\d)(?P<poststr>.*)
+(?P<prestr>.*)(?P<relstr>onze\s+voorkeur\s+(gaat\s)?uit\s+naar\s+(een\s)+.{0,30}(man|vrouw|collega|meisje|meid|jongen|medewerker|dame|heer)\s+in\s+de\s+leeftijd\s+(van|vanaf)\s+)(?P<agestr>\d\d(\s+tot\s+|\s+tot\s+en\s+met\s+|\s+t/m\s+|-)\d\d)(?P<poststr>.*)
 ==leeftijd_bepaald==
 (?P<prestr>.*)(?P<relstr>\s(je|jouw|uw)\s+leeftijd\s+is\s+)(?P<agestr>\d\d)(?P<poststr>.*)
 ==geboortejaar==
