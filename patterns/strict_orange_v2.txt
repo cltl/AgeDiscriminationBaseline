@@ -45,7 +45,7 @@
 (?P<prestr>.*)(?P<relstr>ben(t)?\s+(je|jij|u)\s+(een\s+)?student)(?P<poststr>.)
 (?P<prestr>.*)(?P<relstr>als\s+student\s+ben(t)?\s+(je|jij|u))(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>(pas|net|onlangs|zojuist)\s+afgestudeerd)(?P<poststr>.*)
-(?P<prestr>.*)(?P<relstr>(pas|net|onlangs|zojuist)\s+afgestudeerd[a-z]*\w\s+)(?P<poststr>.*)
+(?P<prestr>.*)(?P<relstr>(pas|net|onlangs|zojuist)\s+afgestudeerd)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>(je|jij|u)\s+bent\s+(pas|net|onlangs|zojuist)\s+afgestudeerd)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>w(ij|e)[\s]*zoeken[\s]*(een\s)?student(en)?)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>w(ij|e)\s+zijn\s+op\s+zoek\s+naar\s+(een\s+)?student(en)?)(?P<poststr>.*)
