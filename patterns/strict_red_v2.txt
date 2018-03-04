@@ -6,9 +6,9 @@
 (?P<prestr>.*)(?P<relstr>vacature\s+voor\s+(een\s)?jong(e|eren|ere)\s+)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>ben(t)?\s+(jij|je|u)\s+(een\s)?jong(e|eren|ere)?\s+(?!(\()?van geest))(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>\s(jij|je|u)\s+bent\s+(een\s)?jong(e|eren|ere)?\s+(?!(\()?van geest))(?P<poststr>.*)
-(?P<prestr>.*)(?P<relstr>ben(t)?\s+(j(ij|e)|u)\s+\d\d\s+jaar\s+of\s+jong\s+(?!(\()?van geest)))(?P<poststr>.*)
-(?P<prestr>.*)(?P<relstr>(j(ij|e)|u)\s+bent\s+\d\d\s+jaar\s+of\s+jong[a-z]\s+(?!(\()?van geest)))(?P<poststr>.*)
-(?P<prestr>.*)(?P<relstr>onze\s+voorkeur\s+(gaat\s)?uit\s+naar\s+(een\s)?jong(e|eren|ere)?\s+(?!(\()?van geest)))(?P<poststr>.*) 
+(?P<prestr>.*)(?P<relstr>ben(t)?\s+(j(ij|e)|u)\s+\d\d\s+jaar\s+of\s+jong\s+(?!(\()?van geest))(?P<poststr>.*)
+(?P<prestr>.*)(?P<relstr>(j(ij|e)|u)\s+bent\s+\d\d\s+jaar\s+of\s+jong[a-z]\s+(?!(\()?van geest))(?P<poststr>.*)
+(?P<prestr>.*)(?P<relstr>onze\s+voorkeur\s+(gaat\s)?uit\s+naar\s+(een\s)?jong(e|eren|ere)?\s+(?!(\()?van geest))(?P<poststr>.*) 
 ==min==
 (?P<prestr>.*)(?P<relstr>(j(ij|e)|u)\s+bent\s+min(imaal|\.|stens)\s+)(?P<agestr>\d\d\s+jaar)!(\s+aantoonba|ervaren|werkervaring|ervaring|actief|kennis)(?P<poststr>.*)
 (?P<prestr>.*)(?P<relstr>(ben(t)?\s+j(ij|e)|u)\s+min(imaal|\.|stens)\s+)(?P<agestr>\d\d\s+jaar)!(\s+aantoonba|ervaren|werkervaring|ervaring|actief|kennis)(?P<poststr>.*)
